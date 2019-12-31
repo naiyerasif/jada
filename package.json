@@ -1,0 +1,13 @@
+{
+  "name": "jada",
+  "private": true,
+  "scripts": {
+    "inspect": "gridsome info",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "build": "gridsome build"
+  },
+  "dependencies": {
+    "gridsome": "^0.7.12"
+  }
+}
