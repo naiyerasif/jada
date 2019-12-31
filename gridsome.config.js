@@ -1,5 +1,10 @@
 const path = require('path')
+const autoprefixer = require('autoprefixer')
 const appConfig = require('./app.config')
+
+const postcssPlugins = [
+  autoprefixer()
+]
 
 const addStyleResources = (rule) => {
   rule.use('style-resource')
@@ -18,6 +23,13 @@ module.exports = {
   siteUrl: appConfig.url,
   titleTemplate: `%s · ${appConfig.name}`,
   plugins: [],
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: postcssPlugins,
+      },
+    },
+  },
   chainWebpack(config) {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
     types.forEach(type => addStyleResources(config.module.rule('scss').oneOf(type)))

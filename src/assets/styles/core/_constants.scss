@@ -11,6 +11,7 @@ $table-hover: false !default;
 $table-striped: false !default;
 $visited-links: false !default;
 $variable-fonts: true !default;
+$body-gradient: true !default;
 
 // Typography
 
@@ -30,11 +31,14 @@ $text-base: 1rem !default;
 
 // Colors
 
-$color-link: rust(500) !default;
-$color-link-hover: rust(700) !default;
-$color-link-visited: navy(500) !default;
-$color-text-muted: var(--text-muted) !default;
+$link: rust(500) !default;
+$link-hover: rust(700) !default;
+$link-visited: navy(500) !default;
+$text: var(--text-default) !default;
+$text-muted: var(--text-muted) !default;
 
+$background-body: var(--background-body) !default;
+$background-body-dim: var(--background-body-dim) !default;
 $background-panel: var(--background-panel) !default;
 
 // Spacing

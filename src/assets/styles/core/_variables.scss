@@ -26,16 +26,11 @@ $text-size-adjust: $proportion-full !default;
 
 // Colors
 
-$link: $color-link !default;
-$link-hover: $color-link-hover !default;
-$link-visited: $color-link-visited !default;
-
-$text: inherit !default;
 $text-code: inherit !default;
 $text-strong: inherit !default;
-$text-light: $color-text-muted !default;
+$text-light: $text-muted !default;
 $text-headings: inherit !default;
-$text-blockquote: $color-text-muted !default;
+$text-blockquote: $text-muted !default;
 $table-thead: inherit !default;
 
 $background-code: $background-panel !default;
@@ -43,9 +38,9 @@ $background-ins: $background-panel !default;
 $background-mark: $background-panel !default;
 $background-table: inherit !default;
 $background-table-even: $background-panel !default;
-$background-table-hover: $color-text-muted !default;
+$background-table-hover: $text-muted !default;
 
-$border: $color-text-muted !default;
+$border: $text-muted !default;
 
 // Spacing
 
@@ -61,5 +56,7 @@ $gap-md: resize($gap-base, 1.25) !default;
 $gap-lg: resize($gap-base, 1.5) !default;
 
 $margin: $gap-base !default;
+
+$graphics-sm: $gap-lg !default;
 
 $radius: $radius-base !default;

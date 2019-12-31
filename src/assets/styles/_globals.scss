@@ -19,6 +19,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
   }
+
+  text-rendering: optimizeLegibility;
+  background-color: $background-body;
+  color: $text;
+
+  @if $body-gradient {
+    background-image: linear-gradient(to top, $background-body 0%, $background-body-dim 100%);
+    min-height: 100vh;
+  }
 }
 
 // Inlines

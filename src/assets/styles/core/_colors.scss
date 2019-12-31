@@ -119,7 +119,22 @@ $rust: (
   @return map-get($rust, $variation);
 }
 
-:root {
-  --text-muted: #{navy(400)};
-  --background-panel: #{secondary(300)};
+// CSS properties for light theme
+
+[data-theme="light"] {
+  --text-default: #{navy(900)};
+  --text-muted: #{navy(500)};
+  --background-body: #{primary(100)};
+  --background-body-dim: #{primary(200)};
+  --background-panel: #{tint(primary(300), 25%)};
+}
+
+// CSS properties for dark theme
+
+[data-theme="dark"] {
+  --text-default: #{tint(primary(300), 40%)};
+  --text-muted: #{transparentize(primary(200), 0.5)};
+  --background-body: #{secondary(900)};
+  --background-body-dim: #{secondary(A100)};
+  --background-panel: #{secondary(A200)};
 }
