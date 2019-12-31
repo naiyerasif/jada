@@ -1,0 +1,55 @@
+// Matrixes and Grids
+// 
+// Based on CSS-grid with Flexbox fallback
+// By convention, `matrix-` classes are not responsive
+// while `grid-` classes are responsive
+
+@mixin matrix($cell-width, $gap: 0, $responsive: true) {
+  & {
+    display: grid;
+    grid-gap: $gap;
+
+    // flexbox fallback
+    display: flex;
+    flex-wrap: wrap;
+
+    display: grid;
+    
+    @if $responsive {
+      grid-template-columns: repeat(auto-fit, minmax(100vw, 1fr));
+    } @else {
+      grid-template-columns: repeat(auto-fit, minmax($cell-width, 1fr));
+    }
+  }
+
+  @if $responsive {
+    @include tab-landscape {
+      grid-template-columns: repeat(auto-fit, minmax($cell-width, 1fr));
+    }
+  }
+
+  &-cell {
+    /* needed for the flex layout*/
+    flex: 1 1 $cell-width;
+    margin: $gap;
+  }
+
+  // Reset margin used by flexbox
+  @supports (display: grid) {
+    & > * {
+      margin: $gap-none;
+    }
+  }
+}
+
+.matrix-tiny {
+  @include matrix(resize($gap-base, 10), $gap-base, false);
+}
+
+.grid-base {
+  @include matrix(resize($gap-base, 22), $gap-base);
+}
+
+.grid-large {
+  @include matrix(resize($gap-base, 24), $gap-base);
+}
