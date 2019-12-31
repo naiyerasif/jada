@@ -22,3 +22,21 @@
     padding-bottom: $margin / $font-size;
   }
 }
+
+// Visibility
+
+@mixin hide($toggle: true) {
+  @if $toggle {
+    visibility: hidden;
+    display: none;
+  } @else {
+    visibility: initial;
+    display: unset;
+  }
+}
+
+// Box spacing
+
+@mixin spacing($gap-top: $gap-lg, $gap-bottom: $gap-lg) {
+  padding: $gap-top $gap-lg $gap-bottom;
+}
