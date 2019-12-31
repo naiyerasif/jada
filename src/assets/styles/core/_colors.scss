@@ -1,0 +1,125 @@
+// Monochrome
+
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+
+// Colormix functions
+// 
+// Use `tint` instead of default `lighten`
+// Use `shade` instead of default `darken` 
+
+@function tint($color, $percentage) {
+  @return mix($white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix($black, $color, $percentage);
+}
+
+// Color palettes
+// 
+// Consists of three colors, where Ax00 variants are WCAG-accesible
+// complements of x00 colors
+// 
+// All the colors are in CIECAM02 color space
+
+$primary: (
+  100: #fef6e4,
+  200: #f8e8cd,
+  300: #f7dcb1,
+  400: #f9c26f,
+  500: #e1ac5b,
+  600: #c59754,
+  700: #aa844d,
+  800: #917346,
+  900: #7b633e,
+  A100: #685437,
+  A200: #564730,
+  A300: #463928,
+  A600: #faf7f0,
+  A700: #f9f2e5,
+  A800: #f8eedc,
+  A900: #f8e9d0
+);
+
+$secondary: (
+  100: #e5e9e9,
+  200: #d7dddd,
+  300: #c5cfce,
+  400: #a0b0af,
+  500: #7a9291,
+  600: #486d6a,
+  700: #396360,
+  800: #174e4b,
+  900: #024542,
+  A100: #0d3936,
+  A200: #0f2d2b,
+  A300: #0c1a19,
+  A600: #fffffe,
+  A700: #fafbfb,
+  A800: #f6f8f8,
+  A900: #f1f3f3
+);
+
+// Complimentary Shades
+
+$navy: (
+  100: #c0c5ce,
+  200: #afb5c2,
+  300: #9fa6b7,
+  400: #717d98,
+  500: #4a5a80,
+  600: #334674,
+  700: #293c6e,
+  800: #1d3268,
+  900: #16295a,
+  A100: #142042,
+  A200: #0e1528,
+  A300: #030407,
+  A600: #f5f6f7,
+  A700: #e9ebee,
+  A800: #e0e2e6,
+  A900: #d3d6dd
+);
+
+$rust: (
+  100: #ea989c,
+  200: #e8848a,
+  300: #e57079,
+  400: #de4358,
+  500: #d42f4b,
+  600: #be3246,
+  700: #a93242,
+  800: #96313d,
+  900: #842f38,
+  A100: #732c33,
+  A200: #63292d,
+  A300: #462023,
+  A600: #f2d8d9,
+  A700: #f0cacc,
+  A800: #eebec0,
+  A900: #ecabae
+);
+
+// Conveniences for palette access
+
+@function primary($variation) {
+  @return map-get($primary, $variation);
+}
+
+@function secondary($variation) {
+  @return map-get($secondary, $variation);
+}
+
+@function navy($variation) {
+  @return map-get($navy, $variation);
+}
+
+@function rust($variation) {
+  @return map-get($rust, $variation);
+}
+
+:root {
+  --text-muted: #{navy(400)};
+  --background-panel: #{secondary(300)};
+}

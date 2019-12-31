@@ -1,0 +1,52 @@
+// Options
+
+$closer-lists: true !default;
+$custom-colors: true !default;
+$custom-fonts: true !default;
+$font-smoothing: true !default;
+$text-adjusting: true !default;
+$heading-borders: false !default;
+$show-underline: false !default;
+$table-hover: false !default;
+$table-striped: false !default;
+$visited-links: false !default;
+$variable-fonts: true !default;
+
+// Typography
+
+$font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Droid Sans", "Oxygen", "Ubuntu", "Cantarell", "Helvetica Neue", Arial,
+  "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-fixed: SFMono-Regular, "Roboto Mono", "Andale Mono",
+  "Lucida Console", Menlo, Monaco, Consolas, "Inconsolata", "Liberation Mono",
+  "Courier New", monospace !default;
+
+$font-normal: 400 !default;
+$font-semibold: 600 !default;
+$font-bold: 700 !default;
+
+$text-base: 1rem !default;
+
+// Colors
+
+$color-link: rust(500) !default;
+$color-link-hover: rust(700) !default;
+$color-link-visited: navy(500) !default;
+$color-text-muted: var(--text-muted) !default;
+
+$background-panel: var(--background-panel) !default;
+
+// Spacing
+
+$line-height-none: 0 !default;
+$line-height-base: 1.6 !default;
+
+$gap-none: 0 !default;
+$gap-base: 1rem !default;
+
+$radius-base: 0.5rem !default;
+
+// Proportions
+
+$proportion-full: 100% !default;

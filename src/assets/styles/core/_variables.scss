@@ -1,0 +1,65 @@
+//  Typography
+
+$font-family-base: $font-family-sans !default;
+
+@if $variable-fonts {
+  @supports (font-variation-settings: normal) {
+    $font-family-base: $font-family-sans-var, $font-family-sans !default;
+  }
+}
+
+$weight-strong: $font-bold !default;
+$weight-headings: $font-semibold !default;
+
+// Font-size variants
+
+$text-xs: resize($text-base, 0.75) !default;
+$text-sm: resize($text-base, 0.875) !default;
+$text-md: resize($text-base, 1.25) !default;
+$text-lg: resize($text-base, 1.5) !default;
+$text-xl: resize($text-base, 1.75) !default;
+$text-2xl: resize($text-base, 2) !default;
+$text-3xl: resize($text-base, 3) !default;
+
+$font-size: $text-base !default;
+$text-size-adjust: $proportion-full !default;
+
+// Colors
+
+$link: $color-link !default;
+$link-hover: $color-link-hover !default;
+$link-visited: $color-link-visited !default;
+
+$text: inherit !default;
+$text-code: inherit !default;
+$text-strong: inherit !default;
+$text-light: $color-text-muted !default;
+$text-headings: inherit !default;
+$text-blockquote: $color-text-muted !default;
+$table-thead: inherit !default;
+
+$background-code: $background-panel !default;
+$background-ins: $background-panel !default;
+$background-mark: $background-panel !default;
+$background-table: inherit !default;
+$background-table-even: $background-panel !default;
+$background-table-hover: $color-text-muted !default;
+
+$border: $color-text-muted !default;
+
+// Spacing
+
+$line-height: $line-height-base !default;
+$line-height-sm: resize($line-height-base, 0.5) !default;
+$line-height-md: resize($line-height-base, 1.1) !default;
+
+// Gap variants
+
+$gap-xs: resize($gap-base, 0.5) !default;
+$gap-sm: resize($gap-base, 0.75) !default;
+$gap-md: resize($gap-base, 1.25) !default;
+$gap-lg: resize($gap-base, 1.5) !default;
+
+$margin: $gap-base !default;
+
+$radius: $radius-base !default;

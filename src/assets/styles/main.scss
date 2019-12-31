@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@import "reset";
+@import "core";
+@import "helpers";
+@import "globals";
+
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: auto;
+}
+
+.layout {
+  overflow-x: hidden;
+}

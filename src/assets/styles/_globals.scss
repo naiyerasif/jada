@@ -1,0 +1,413 @@
+/*! remarkability.css v0.6.7 | MIT License | https://github.com/Microflash/remarkability */
+body {
+  line-height: $line-height;
+  font-size: $font-size;
+
+  @if $text-adjusting {
+    text-size-adjust: $text-size-adjust;
+  }
+
+  @if $custom-colors {
+    color: $text;
+  }
+
+  @if $custom-fonts {
+    font-family: $font-family-base;
+  }
+
+  @if $font-smoothing {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+// Inlines
+a {
+  text-decoration: none;
+
+  @if $custom-colors {
+    color: $link;
+
+    @if $visited-links {
+      &:visited {
+        color: $link-visited;
+      }
+    }
+  }
+
+  @if $show-underline {
+    text-decoration: underline;
+  } @else {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &:active,
+  &:hover {
+    outline-width: 0;
+  }
+}
+
+abbr {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+cite {
+  font-style: italic;
+}
+
+hr {
+  background: $border;
+  border: none;
+  display: block;
+  height: 1px;
+  margin-bottom: $margin;
+  margin-top: $margin;
+}
+
+img {
+  vertical-align: text-bottom;
+}
+
+mark,
+ins {
+  border-radius: $radius;
+  padding: 0em 0.4em 0.2em;
+  vertical-align: baseline;
+}
+
+ins {
+  background-color: $background-ins;
+  text-decoration: none;
+}
+
+mark {
+  background-color: $background-mark;
+}
+
+summary {
+  display: list-item;
+}
+
+details {
+  display: block;
+
+  summary {
+    cursor: pointer;
+  }
+
+  p {
+    padding-left: 1.1em;
+
+    &:first-of-type {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+  }
+}
+
+small {
+  font-size: 0.8em;
+}
+
+strong {
+  font-weight: $weight-strong;
+
+  @if $custom-colors {
+    color: $text-strong;
+  }
+}
+
+sub,
+sup {
+  font-size: 0.8em;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+sup {
+  vertical-align: super;
+}
+
+// Blocks
+p,
+dl,
+ol,
+ul,
+blockquote,
+pre,
+table {
+  margin-bottom: $margin;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+p {
+  &:empty {
+    display: none;
+  }
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $weight-headings;
+  line-height: 1.2;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @if $custom-colors {
+    color: $text-headings;
+  }
+}
+
+h1 {
+  @include heading(2.4, true);
+
+  line-height: 1;
+}
+
+h2 {
+  @include heading(1.6, true, true);
+
+  line-height: 1.1;
+}
+
+h3 {
+  @include heading(1.3);
+}
+
+h4 {
+  @include heading(1.2);
+}
+
+h5 {
+  @include heading(1.1);
+}
+
+h6 {
+  @include heading(1);
+}
+
+// Paragraphs
+@if $closer-lists {
+  p {
+    & + dl,
+    & + ol,
+    & + ul {
+      margin-top: -$margin;
+    }
+  }
+}
+
+// Lists
+dd {
+  margin-left: $margin;
+}
+
+ol,
+ul {
+  list-style-position: outside;
+  margin-left: $margin;
+}
+
+ol {
+  list-style-type: decimal;
+
+  ol {
+    list-style-type: lower-alpha;
+
+    ol {
+      list-style-type: lower-roman;
+
+      ol {
+        list-style-type: lower-greek;
+
+        ol {
+          list-style-type: decimal;
+
+          ol {
+            list-style-type: lower-alpha;
+          }
+        }
+      }
+    }
+  }
+}
+
+ul {
+  list-style-type: disc;
+
+  ul {
+    list-style-type: circle;
+
+    ul {
+      list-style-type: square;
+
+      ul {
+        list-style-type: circle;
+
+        ul {
+          list-style-type: disc;
+
+          ul {
+            list-style-type: circle;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Blockquote
+blockquote {
+  border-left: 2px solid $border;
+  padding: 0.6em 1.2em;
+
+  @if $custom-colors {
+    color: $text-blockquote;
+  }
+}
+
+// Code
+code,
+kbd,
+samp,
+pre {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  background-color: $background-code;
+  color: $text;
+  font-size: 0.9em;
+  border-radius: $radius;
+
+  @if $custom-fonts {
+    font-family: $font-family-fixed;
+  }
+}
+
+code,
+kbd,
+samp {
+  padding: 0.1em 0.4em 0.2em;
+
+  @if $custom-colors {
+    color: $text-code;
+  }
+}
+
+pre {
+  overflow: auto;
+  padding: 1em 1.2em;
+
+  code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1em;
+    white-space: pre;
+  }
+}
+
+// Figure
+figure {
+  margin-bottom: $margin * 2;
+  text-align: center;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+figcaption {
+  font-size: 0.8em;
+  margin-top: $margin / 1.6;
+
+  @if $custom-colors {
+    color: $text-light;
+  }
+}
+
+// Table
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+
+  pre {
+    white-space: pre-wrap;
+  }
+}
+
+th,
+td {
+  @include cell(1);
+
+  border: 1px solid $border;
+  line-height: 1.4;
+}
+
+thead,
+tfoot {
+  tr {
+    @if $table-striped {
+      background-color: $border;
+    } @else {
+      background-color: $background-table-hover;
+    }
+  }
+
+  th,
+  td {
+    @include cell(0.9);
+
+    @if $custom-colors {
+      color: $table-thead;
+    }
+
+    code {
+      background-color: $background-table;
+    }
+  }
+}
+
+tbody {
+  tr {
+    background-color: $background-table;
+
+    @if $table-striped {
+      &:nth-child(even) {
+        background-color: $background-table-even;
+      }
+
+      @if $table-hover {
+        &:hover {
+          background-color: $background-table-hover;
+        }
+      }
+    } @else {
+      @if $table-hover {
+        &:hover {
+          background-color: $background-table-even;
+        }
+      }
+    }
+  }
+}
