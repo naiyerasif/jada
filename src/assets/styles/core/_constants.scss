@@ -13,6 +13,13 @@ $visited-links: false !default;
 $variable-fonts: true !default;
 $body-gradient: true !default;
 
+// Breakpoints
+
+$width-sm: 600px !default;
+$width-md: 900px !default;
+$width-lg: 1200px !default;
+$width-xl: 1800px !default;
+
 // Typography
 
 $font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
