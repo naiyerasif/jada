@@ -127,6 +127,7 @@ $rust: (
   --background-body: #{primary(100)};
   --background-body-dim: #{primary(200)};
   --background-panel: #{tint(primary(300), 25%)};
+  --background-scrollbar: #{rust(100)};
 }
 
 // CSS properties for dark theme
@@ -137,4 +138,5 @@ $rust: (
   --background-body: #{secondary(900)};
   --background-body-dim: #{secondary(A100)};
   --background-panel: #{secondary(A200)};
+  --background-scrollbar: #{rust(900)};
 }

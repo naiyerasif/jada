@@ -50,6 +50,10 @@ $background-body: var(--background-body) !default;
 $background-body-dim: var(--background-body-dim) !default;
 $background-panel: var(--background-panel) !default;
 
+$scrollbar-track: var(--background-scrollbar) !default;
+$scrollbar-thumb: $link !default;
+$scrollbar-button: $link-hover !default;
+
 // Spacing
 
 $line-height-none: 0 !default;
