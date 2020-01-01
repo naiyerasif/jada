@@ -10,19 +10,21 @@ A versatile blog starter for [Gridsome](https://gridsome.org/)
 
 ## Features
 
-- Accessible and responsive design
-- Support for blogging with markdown content
-- Table of contents, Tags, Pagination for blog posts
-- Search with [Fuse.js](https://fusejs.io/) and [vue-fuse](https://github.com/shayneo/vue-fuse)
-- Automated summary generation for posts (Made possible by marked, can be overridden by manual summary)
-- GitHub URL generation for blog posts (Done through URL generation based on repository URL but can be configured with a custom implementation to cover other usecases)
-- Syntax highlighting with [Shiki](https://github.com/octref/shiki)
-- [Sass](https://sass-lang.com/) integration
-- Theme Switcher for Dark and Light modes
-- Support for RSS, Atom and JSON feeds (By default, only RSS feed is generated.)
-- Smooth scrolling to sections with [vue-scrollto](https://github.com/rigor789/vue-scrollTo) (Not available on generated Table of contents of the blog posts)
-- Custom 404 page
-- Sitemap in XML
+- [ ] Accessible and responsive design
+- [x] Support for blogging with markdown content
+- [ ] Table of contents for blog posts
+- [x] Tags for blog posts
+- [ ] Pagination for blog posts
+- [ ] Search with [Fuse.js](https://fusejs.io/) and [vue-fuse](https://github.com/shayneo/vue-fuse)
+- [x] Automated blurb generation for posts (Made possible by marked, can be overridden by manual blurb)
+- [x] GitHub URL generation for blog posts (Done through URL generation based on repository URL but can be configured with a custom implementation to cover other usecases)
+- [x] Syntax highlighting with [Shiki](https://github.com/octref/shiki)
+- [x] [Sass](https://sass-lang.com/) integration
+- [x] Theme Switcher for Dark and Light modes
+- [ ] Support for RSS, Atom and JSON feeds (By default, only RSS feed is generated.)
+- [ ] Smooth scrolling to sections with [vue-scrollto](https://github.com/rigor789/vue-scrollTo) (Not available on generated Table of contents of the blog posts)
+- [x] Custom 404 page
+- [ ] Sitemap in XML
 
 ## Installation
 
