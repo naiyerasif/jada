@@ -16,8 +16,50 @@
   overflow-x: hidden;
 }
 
+.article,
+.note {
+  @include spacing;
+}
+
+.article {
+  background-color: $background-panel;
+}
+
+.note {
+  background-color: $background-panel-dim;
+}
+
+.card {
+  @extend .article;
+
+  &:hover, 
+  &:focus {
+    background-color: $background-panel-dim;
+  }
+
+  .card-header {
+    font-weight: $font-semibold;
+    font-size: $text-md;
+  }
+
+  .card-footer, .card-body {
+    font-weight: $font-normal;
+  }
+
+  .card-footer {
+    font-size: $text-sm;
+  }
+}
+
 .icon {
   width: $graphics-sm;
   height: $graphics-sm;
   vertical-align: middle;
+}
+
+.decorated-links {
+  a:focus, 
+  a:hover {
+    @include underline;
+  }
 }

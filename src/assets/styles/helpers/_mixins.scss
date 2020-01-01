@@ -40,3 +40,13 @@
 @mixin spacing($gap-top: $gap-lg, $gap-bottom: $gap-lg) {
   padding: $gap-top $gap-lg $gap-bottom;
 }
+
+// Underline decoration
+
+@mixin underline {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  -webkit-text-underline-position: under;
+  -ms-text-underline-position: below;
+  text-underline-position: under;
+}

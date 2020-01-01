@@ -37,23 +37,6 @@ $font-bold: 700 !default;
 
 $text-base: 1rem !default;
 
-// Colors
-
-$link: rust(400) !default;
-$link-hover: rust(600) !default;
-$link-visited: navy(500) !default;
-$text: var(--text-default) !default;
-$text-muted: var(--text-muted) !default;
-$selected: transparentize(primary(500), 0.75);
-
-$background-body: var(--background-body) !default;
-$background-body-dim: var(--background-body-dim) !default;
-$background-panel: var(--background-panel) !default;
-
-$scrollbar-track: var(--background-scrollbar) !default;
-$scrollbar-thumb: $link !default;
-$scrollbar-button: $link-hover !default;
-
 // Spacing
 
 $line-height-none: 0 !default;
