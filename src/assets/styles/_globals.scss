@@ -1,4 +1,14 @@
 /*! remarkability.css v0.6.7 | MIT License | https://github.com/Microflash/remarkability */
+* {
+  &::-moz-selection { 
+    background: $selected; 
+  }
+  
+  &::selection { 
+    background: $selected; 
+  }
+}
+
 body {
   line-height: $line-height;
   font-size: $font-size;
@@ -33,9 +43,15 @@ body {
 // Inlines
 a {
   text-decoration: none;
+  cursor: pointer;
 
   @if $custom-colors {
     color: $link;
+
+    &:focus, 
+    &:hover {
+      color: $link-hover;
+    }
 
     @if $visited-links {
       &:visited {
@@ -56,6 +72,14 @@ a {
   &:hover {
     outline-width: 0;
   }
+
+  @if $external-links {
+    &[rel*="nofollow"] {
+      &::after {
+        content: $indicator-external-link;
+      }
+    }
+  }
 }
 
 abbr {
@@ -68,7 +92,7 @@ cite {
 }
 
 hr {
-  background: $border;
+  background-color: $border;
   border: none;
   display: block;
   height: 1px;
@@ -280,10 +304,24 @@ ul {
   }
 }
 
+// Input
+input {
+  font-family: $font-family-base;
+  font-size: $font-size;
+
+  &::placeholder {
+    opacity: $opacity-md;
+  }
+
+  &::-moz-placeholder {
+    opacity: $opacity-md;
+  }
+}
+
 // Blockquote
 blockquote {
   border-left: 2px solid $border;
-  padding: 0.6em 1.2em;
+  padding: 0.5em 1em;
 
   @if $custom-colors {
     color: $text-blockquote;

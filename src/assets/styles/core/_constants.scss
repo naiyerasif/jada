@@ -12,6 +12,7 @@ $table-striped: false !default;
 $visited-links: false !default;
 $variable-fonts: true !default;
 $body-gradient: true !default;
+$external-links: true !default;
 
 // Breakpoints
 
@@ -38,11 +39,12 @@ $text-base: 1rem !default;
 
 // Colors
 
-$link: rust(500) !default;
-$link-hover: rust(700) !default;
+$link: rust(400) !default;
+$link-hover: rust(600) !default;
 $link-visited: navy(500) !default;
 $text: var(--text-default) !default;
 $text-muted: var(--text-muted) !default;
+$selected: transparentize(primary(500), 0.75);
 
 $background-body: var(--background-body) !default;
 $background-body-dim: var(--background-body-dim) !default;
@@ -61,3 +63,11 @@ $radius-base: 0.5rem !default;
 // Proportions
 
 $proportion-full: 100% !default;
+
+// Indicators
+
+// Used as a value of `content`
+// Can be a `url`
+$indicator-external-link: '\02197' !default;
+
+$opacity-md: 0.5 !default;
