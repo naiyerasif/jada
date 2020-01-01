@@ -31,7 +31,25 @@ module.exports = {
       }
     }
   },
+  templates: {
+    Post: '/blog/:year/:month/:day/:title',
+    Tag: '/tag/:id'
+  },
   plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/blog/**/*.md',
+        typeName: 'Post',
+        refs: {
+          tags: {
+            typeName: 'Tag',
+            create: true
+          },
+          authors: 'Profile'
+        }
+      }
+    },
     {
       use: '@gridsome/vue-remark',
       options: {
