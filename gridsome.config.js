@@ -22,6 +22,15 @@ module.exports = {
   siteDescription: appConfig.description,
   siteUrl: appConfig.url,
   titleTemplate: `%s · ${appConfig.name}`,
+  permalinks: {
+    slugify: {
+      use: '@sindresorhus/slugify',
+      options: {
+        decamelize: false,
+        customReplacements: [['.js', 'js']]
+      }
+    }
+  },
   plugins: [
     {
       use: '@gridsome/vue-remark',
