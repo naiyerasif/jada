@@ -55,6 +55,7 @@ $scrollbar-thumb: $link !default;
 $scrollbar-button: $link-hover !default;
 
 $border: $text-muted !default;
+$border-panel: var(--border-panel) !default;
 
 // Spacing
 
@@ -72,6 +73,7 @@ $gap-lg: resize($gap-base, 1.5) !default;
 
 $margin: $gap-base !default;
 
+$graphics: $gap-base !default;
 $graphics-sm: $gap-lg !default;
 
 $radius: $radius-base !default;
