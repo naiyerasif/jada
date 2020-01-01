@@ -22,7 +22,34 @@ module.exports = {
   siteDescription: appConfig.description,
   siteUrl: appConfig.url,
   titleTemplate: `%s · ${appConfig.name}`,
-  plugins: [],
+  plugins: [
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Profile',
+        baseDir: './profiles',
+        template: './src/templates/Profile.vue',
+        route: '/profile/:id'
+      }
+    }
+  ],
+  transformers: {
+    remark: {
+      plugins: [
+        ['gridsome-plugin-remark-shiki', { theme: 'nord', skipInline: true }]
+      ],
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      slug: true,
+      autolinkHeadings: {
+        content: {
+          type: 'element',
+          tagName: 'span',
+          properties: { className: ['ref-link'] }
+        }
+      }
+    }
+  },
   css: {
     loaderOptions: {
       postcss: {

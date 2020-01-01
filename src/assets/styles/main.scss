@@ -62,6 +62,10 @@
   margin-bottom: resize($gap-base, 0.25);
 }
 
+.emphasis {
+  color: $link;
+}
+
 .icon {
   width: $graphics-sm;
   height: $graphics-sm;

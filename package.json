@@ -8,7 +8,10 @@
     "build": "gridsome build"
   },
   "dependencies": {
-    "gridsome": "^0.7.12"
+    "@gridsome/transformer-remark": "^0.4.0",
+    "@gridsome/vue-remark": "^0.1.9",
+    "gridsome": "^0.7.12",
+    "gridsome-plugin-remark-shiki": "^0.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.3",
