@@ -51,6 +51,17 @@
   }
 }
 
+.lead {
+  font-weight: $font-semibold;
+  font-size: $text-md;
+  margin-top: $gap-xs;
+  margin-bottom: $gap-xs;
+}
+
+.follow {
+  margin-bottom: resize($gap-base, 0.25);
+}
+
 .icon {
   width: $graphics-sm;
   height: $graphics-sm;

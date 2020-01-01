@@ -122,7 +122,7 @@ $rust: (
 // CSS properties for light theme
 
 [data-theme="light"] {
-  --text-default: #{navy(900)};
+  --text-default: #{tint($black, 20%)};
   --text-muted: #{navy(500)};
   --background-body: #{primary(100)};
   --background-body-dim: #{primary(200)};
@@ -135,7 +135,7 @@ $rust: (
 // CSS properties for dark theme
 
 [data-theme="dark"] {
-  --text-default: #{tint(primary(300), 40%)};
+  --text-default: #{shade($white, 20%)};
   --text-muted: #{transparentize(primary(200), 0.5)};
   --background-body: #{secondary(900)};
   --background-body-dim: #{secondary(A100)};

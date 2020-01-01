@@ -69,7 +69,7 @@ export default {
     align-items: center;
     width: $width-full;
     list-style: none;
-    font-weight: $font-bold;
+    font-weight: $font-semibold;
 
     @include phone {
       margin-top: $gap-md;
@@ -86,7 +86,7 @@ export default {
       }
     }
 
-    @include tab-landscape {
+    @include tab-portrait {
       display: flex;
       flex: 0 1 auto;
       width: auto;
@@ -120,7 +120,7 @@ $hamburger-layer-spacing: 6px !default;
   margin: 0;
   overflow: visible;
 
-  @include tab-landscape {
+  @include tab-portrait {
     @include hide(true);
   }
 
