@@ -1,8 +1,10 @@
 <template>
   <Layout>
-    <Hero>About</Hero>
+    <Hero>
+      <h1>About</h1>
+    </Hero>
     <div class="container">
-      <Panel>
+      <Panel decorated>
         <blockquote>A practical blog starter for <a href="https://gridsome.org/">Gridsome</a></blockquote>
         <h2>Features</h2>
         <ul>

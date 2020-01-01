@@ -1,9 +1,11 @@
 <template>
   <Layout>
     <Hero>
-      Hello, I am <span id="about-me" class="emphasis">{{ firstName }}</span>
-      <br>a {{ role }}
-      <br>from {{ $page.profile.location }}
+      <h1>
+        Hello, I am <span id="about-me" class="emphasis">{{ firstName }}</span>
+        <br>a {{ role }}
+        <br>from {{ $page.profile.location }}
+      </h1>
     </Hero>
     <VueRemarkContent />
   </Layout>

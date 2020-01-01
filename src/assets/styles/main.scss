@@ -37,13 +37,21 @@
     background-color: $background-panel-dim;
   }
 
-  .card-header {
-    font-weight: $font-semibold;
-    font-size: $text-md;
+  & > a {
+    text-decoration: none;
   }
 
-  .card-footer, .card-body {
+  .card-header {
     font-weight: $font-normal;
+    font-size: $text-xs;
+
+    & > a {
+      text-decoration: none;
+    }
+  }
+
+  .card-body {
+    font-size: $text-md;
   }
 
   .card-footer {
@@ -77,4 +85,8 @@
   a:hover {
     @include underline;
   }
+}
+
+.translucent {
+  opacity: $opacity-sm;
 }

@@ -9,7 +9,7 @@ avatar: './avatars/jada.png'
 import Panel from '~/components/Panel'
 
 <div class="container">
-  <Panel>
+  <Panel decorated>
 
 #### Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat ac felis donec et odio pellentesque diam volutpat commodo. Purus semper eget duis at tellus at urna. Id cursus metus aliquam eleifend mi. Suspendisse sed nisi lacus sed viverra tellus in hac habitasse. Tempus iaculis urna id volutpat lacus laoreet. Massa eget egestas purus viverra. Massa massa ultricies mi quis hendrerit dolor magna eget. Id eu nisl nunc mi ipsum. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Etiam sit amet nisl purus. Tortor condimentum lacinia quis vel. Egestas erat imperdiet sed euismod nisi. Gravida rutrum quisque non tellus orci ac auctor augue.
 

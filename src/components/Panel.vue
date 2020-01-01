@@ -1,25 +1,19 @@
 <template>
   <div class="panel">
-    <main class="article decorated-links">
+    <section :class="classes">
       <slot></slot>
-    </main>
-    <section class="note decorated-links" v-if="noteExists">
-      <slot name="note"></slot>
-    </section>
-    <section class="card" v-if="cardExists">
-      <slot name="card"></slot>
     </section>
   </div>
 </template>
 
 <script>
 export default {
+  props: ['type', 'decorated'],
   computed: {
-    noteExists() {
-      return !!this.$slots.note
-    },
-    cardExists() {
-      return !!this.$slots.card
+    classes() {
+      const contentClass = this.type === 'note' ? 'note' : this.type === 'card' ? 'card' : 'article'
+      const decorationClass = this.decorated === true ? 'decorated-links' : ''
+      return contentClass + decorationClass
     }
   }
 }
