@@ -45,8 +45,9 @@ $border: $text-muted !default;
 // Spacing
 
 $line-height: $line-height-base !default;
-$line-height-sm: resize($line-height-base, 0.5) !default;
-$line-height-md: resize($line-height-base, 1.1) !default;
+$line-height-xs: resize($line-height-base, 0.78125) !default;
+$line-height-sm: resize($line-height-base, 0.875) !default;
+$line-height-md: resize($line-height-base, 1.0625) !default;
 
 // Gap variants
 
@@ -60,3 +61,5 @@ $margin: $gap-base !default;
 $graphics-sm: $gap-lg !default;
 
 $radius: $radius-base !default;
+
+$width-full: $proportion-full !default;

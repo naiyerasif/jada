@@ -185,13 +185,13 @@ h6 {
 h1 {
   @include heading(2.4, true);
 
-  line-height: 1;
+  line-height: $line-height-xs;
 }
 
 h2 {
   @include heading(1.6, true, true);
 
-  line-height: 1.1;
+  line-height: $line-height-sm;
 }
 
 h3 {
