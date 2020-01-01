@@ -7,6 +7,13 @@ const { basePath, constructEditUrl } = editConfigs.filter(p => p.collection === 
 
 module.exports = function (api) {
   api.loadSource(({ addSchemaResolvers, addCollection, getCollection }) => {
+    const posts = getCollection('Post')
+    posts.data().forEach(node => {
+      if (!node.updated) {
+        node.updated = node.date
+      }
+    })
+
     addSchemaResolvers({
       Post: {
         blurb: {
