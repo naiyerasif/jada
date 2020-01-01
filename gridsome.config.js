@@ -46,7 +46,9 @@ module.exports = {
             typeName: 'Tag',
             create: true
           },
-          authors: 'Profile'
+          authors: {
+            typeName: 'Profile'
+          }
         }
       }
     },
