@@ -3,7 +3,7 @@
     <Hero>
       <h1>
         Hello, I am <span id="about-me" class="emphasis">{{ firstName }}</span>
-        <br>a {{ role }}
+        <br>a {{ $page.profile.role | lowerCase }}
         <br>from {{ $page.profile.location }}
       </h1>
     </Hero>
@@ -37,9 +37,11 @@ export default {
   computed: {
     firstName() {
       return this.$page.profile.name.substr(0, this.$page.profile.name.indexOf(' '))
-    },
-    role() {
-      return this.$page.profile.role.toLowerCase()
+    }
+  },
+  filters: {
+    lowerCase(value) {
+      return value.toLowerCase()
     }
   }
 }
