@@ -6,6 +6,7 @@
       </h1>
     </Hero>
     <Posts :posts="$page.tag.belongsTo.edges" />
+    <Pagination v-if="$page.tag.belongsTo.pageInfo.totalPages > 1" :path="`/tag/${$page.tag.title}`" :input="$page.tag.belongsTo.pageInfo" />
   </Layout>
 </template>
 
@@ -43,6 +44,7 @@ query Tag ($id: ID!, $page: Int) {
 <script>
 import Hero from '~/components/Hero'
 import Posts from '~/components/Posts'
+import Pagination from '~/components/Pagination'
 
 export default {
   metaInfo() {
@@ -52,7 +54,8 @@ export default {
   },
   components: {
     Hero,
-    Posts
+    Posts,
+    Pagination
   }
 }
 </script>

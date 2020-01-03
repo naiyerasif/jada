@@ -14,7 +14,7 @@ A versatile blog starter for [Gridsome](https://gridsome.org/)
 - [x] Support for blogging with markdown content
 - [ ] Table of contents for blog posts
 - [x] Tags for blog posts
-- [ ] Pagination for blog posts
+- [x] Pagination for blog posts
 - [ ] Search with [Fuse.js](https://fusejs.io/) and [vue-fuse](https://github.com/shayneo/vue-fuse)
 - [x] Automated blurb generation for posts (Made possible by marked, can be overridden by manual blurb)
 - [x] GitHub URL generation for blog posts (Done through URL generation based on repository URL but can be configured with a custom implementation to cover other usecases)

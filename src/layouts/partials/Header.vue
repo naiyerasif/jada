@@ -35,10 +35,7 @@ export default {
 
 <style lang="scss">
 .header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  @include center(wrap, space-between);
   @include spacing;
 
   .brand {

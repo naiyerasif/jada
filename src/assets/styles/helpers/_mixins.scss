@@ -50,3 +50,12 @@
   -ms-text-underline-position: below;
   text-underline-position: under;
 }
+
+// Align to center
+
+@mixin center($wrap: wrap, $justify: center) {
+  display: flex;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: center;
+}

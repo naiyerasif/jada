@@ -7,6 +7,7 @@
       </h1>
     </Hero>
     <Posts :posts="$page.posts.edges" />
+    <Pagination v-if="$page.posts.pageInfo.totalPages > 1" :input="$page.posts.pageInfo" />
   </Layout>
 </template>
 
@@ -40,6 +41,7 @@ query Posts ($page: Int) {
 <script>
 import Hero from '~/components/Hero'
 import Posts from '~/components/Posts'
+import Pagination from '~/components/Pagination'
 
 export default {
   metaInfo: {
@@ -47,7 +49,8 @@ export default {
   },
   components: {
     Hero,
-    Posts
+    Posts,
+    Pagination
   }
 }
 </script>
