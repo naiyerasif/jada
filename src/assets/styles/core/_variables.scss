@@ -70,6 +70,8 @@ $gap-xs: resize($gap-base, 0.5) !default;
 $gap-sm: resize($gap-base, 0.75) !default;
 $gap-md: resize($gap-base, 1.25) !default;
 $gap-lg: resize($gap-base, 1.5) !default;
+$gap-xl: resize($gap-base, 2) !default;
+$gap-xxl: resize($gap-base, 3) !default;
 
 $margin: $gap-base !default;
 
