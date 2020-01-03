@@ -7,6 +7,8 @@ tags: ['article', 'typescript']
 
 TypeScript is an [open-source programming language](https://github.com/microsoft/TypeScript) developed by Microsoft. With adoption from many popular libraries and frameworks, TypeScript has [secured its own place alongside ES6](https://2018.stateofjs.com/javascript-flavors/overview/) as one of the preferred JavaScript flavors. There are strong opinions on why (and why not) to use it. This is an opinion piece on some specific scenarios where TypeScript can be useful.
 
+### Table of Contents
+
 ## Navigating large codebases
 
 Developers read a lot of code every day. It becomes a challenge when a project is large and complex, which most enterprise projects are. With the help of type information, a source editor can provide useful information that makes understanding the relationships between the parts of code easier. 

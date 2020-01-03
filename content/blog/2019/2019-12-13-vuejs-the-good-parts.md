@@ -9,6 +9,8 @@ Vue.js has been on a tear [lately](https://2019.stateofjs.com/front-end-framewor
 
 What's Vue.js, you ask? 😲 It is a JavaScript framework to develop user interfaces released in 2014 by [Evan You](https://evanyou.me/). With the core library, you can build the view layer of your application. For more requirements (like routing, state management, etc.), you can use [support libraries](https://github.com/vuejs/awesome-vue#components--libraries). There is a reason why Vue.js declares itself as a *progressive* framework!
 
+### Table of Contents
+
 ## The Strengths of Vue.js
 
 - It is **very approachable**. HTML, CSS, and JavaScript are all you need to know to get started. This makes the learning curve small. The [official documentation](https://vuejs.org/) helps you out when things get fuzzy.

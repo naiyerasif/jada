@@ -3,6 +3,7 @@ const siteConfig = require('./data/site.json')
 module.exports = {
   copyright: `Copyright ${new Date().getFullYear()} ${this.name}`,
   blogDir: 'content/blog/',
+  tocPattern: 'Table of Contents',
   editConfig: {
     paths: [
       {

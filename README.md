@@ -12,7 +12,7 @@ A versatile blog starter for [Gridsome](https://gridsome.org/)
 
 - [ ] Accessible and responsive design
 - [x] Support for blogging with markdown content
-- [ ] Table of contents for blog posts
+- [x] Table of contents for blog posts
 - [x] Tags for blog posts
 - [x] Pagination for blog posts
 - [ ] Search with [Fuse.js](https://fusejs.io/) and [vue-fuse](https://github.com/shayneo/vue-fuse)
@@ -22,7 +22,6 @@ A versatile blog starter for [Gridsome](https://gridsome.org/)
 - [x] [Sass](https://sass-lang.com/) integration
 - [x] Theme Switcher for Dark and Light modes
 - [ ] Support for RSS, Atom and JSON feeds (By default, only RSS feed is generated.)
-- [ ] Smooth scrolling to sections with [vue-scrollto](https://github.com/rigor789/vue-scrollTo) (Not available on generated Table of contents of the blog posts)
 - [x] Custom 404 page
 - [ ] Sitemap in XML
 

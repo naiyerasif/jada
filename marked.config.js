@@ -1,5 +1,6 @@
 const marked = require('marked')
 const decode = require('unescape')
+const appConfig = require('./app.config')
 
 const whitespace = ' '
 
@@ -30,7 +31,7 @@ const preprocess = (md) => {
   let markdown = ''
   let shouldStop = false
   for (token of tokens) {
-    if (shouldStop || markdown.length > limit) break
+    if (shouldStop || markdown.length > limit || token.text === appConfig.tocPattern) break
     if (markdown !== '' && token.type === 'heading') shouldStop = true
     if (token.type !== 'heading' && token.text) {
       markdown = markdown + token.text.trim()
