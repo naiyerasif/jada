@@ -10,7 +10,7 @@
         </div>
         <g-link :to="post.node.path">
           <h2 class="card-body">{{ post.node.title }}</h2>
-          <p class="card-footer">{{ post.node.blurb | snippet }} &hellip;</p>
+          <p class="card-footer">{{ post.node.blurb | clip }} &hellip;</p>
         </g-link>
       </Panel>
     </div>
@@ -29,11 +29,6 @@ export default {
     displayDate(post) {
       const published = `Published ${post.date}`
       return !post.hasOwnProperty('updated') ? published : (post.updated !== post.date ? `Updated ${post.updated}` : published); 
-    }
-  },
-  filters: {
-    snippet(value) {
-      return value.replace(/^(.{250}[^\s]*).*/, '$1')
     }
   }
 }
