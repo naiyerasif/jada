@@ -6,7 +6,7 @@
 
 <style lang="scss" scoped>
 .hero {
-  @include spacing($gap-xs);
+  @include spacing($gap-base, resize($gap-base, 2.5));
   width: $width-full;
 
   a {

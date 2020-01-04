@@ -4,10 +4,16 @@
 // By convention, `matrix-` classes are not responsive
 // while `grid-` classes are responsive
 
-@mixin matrix($cell-width, $gap: 0, $responsive: true) {
+@mixin matrix($cell-width, $gap: 0, $gap-lg-screen: 0, $responsive: true) {
   & {
     display: grid;
     grid-gap: $gap;
+
+    @if $gap != $gap-lg-screen {
+      @include desktop {
+        grid-gap: $gap-lg-screen;
+      }
+    }
 
     // flexbox fallback
     display: flex;
@@ -32,6 +38,12 @@
     /* needed for the flex layout*/
     flex: 1 1 $cell-width;
     margin: $gap;
+
+    @if $gap != $gap-lg-screen {
+      @include desktop {
+        margin: $gap-lg-screen;
+      }
+    }
   }
 
   // Reset margin used by flexbox
@@ -47,9 +59,9 @@
 }
 
 .grid-base {
-  @include matrix(resize($gap-base, 22), $gap-base);
+  @include matrix(resize($gap-base, 22), $gap-base, $gap-base);
 }
 
 .grid-large {
-  @include matrix(resize($gap-base, 24), $gap-base);
+  @include matrix(resize($gap-base, 24), $gap-base, $gap-xl);
 }

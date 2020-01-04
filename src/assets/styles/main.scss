@@ -10,6 +10,10 @@
   margin: 0 auto;
   position: relative;
   width: auto;
+
+  @include desktop {
+    max-width: $expanse;
+  }
 }
 
 .layout {

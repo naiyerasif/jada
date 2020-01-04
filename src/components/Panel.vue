@@ -12,7 +12,7 @@ export default {
   computed: {
     classes() {
       const contentClass = this.type === 'note' ? 'note' : this.type === 'card' ? 'card' : 'article'
-      const decorationClass = this.decorated === true ? 'decorated-links' : ''
+      const decorationClass = this.decorated ? 'decorated-links' : ''
       return contentClass + decorationClass
     }
   }

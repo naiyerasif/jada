@@ -1,5 +1,5 @@
 <template>
-  <section class="container pagination note">
+  <section class="container pagination">
     <g-link :to="previousPage(input.currentPage)" v-if="input.currentPage > 1">&larr; Prev</g-link>
     <div>page {{ input.currentPage }} of {{ input.totalPages }}</div>
     <g-link :to="nextPage(input.currentPage, input.totalPages)" v-if="input.currentPage < input.totalPages">Next &rarr;</g-link>
@@ -32,6 +32,11 @@ export default {
 
 <style lang="scss" scoped>
 .pagination {
+  @include spacing;
   @include center(nowrap, space-between);
+
+  @include desktop {
+    width: $expanse-centered;
+  }
 }
 </style>
