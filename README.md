@@ -23,7 +23,7 @@ A versatile blog starter for [Gridsome](https://gridsome.org/)
 - [x] Theme Switcher for Dark and Light modes
 - [ ] Support for RSS, Atom and JSON feeds (By default, only RSS feed is generated.)
 - [x] Custom 404 page
-- [ ] Sitemap in XML
+- [x] Sitemap in XML
 
 ## Installation
 

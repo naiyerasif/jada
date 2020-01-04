@@ -60,6 +60,12 @@ module.exports = {
         template: './src/templates/Profile.vue',
         route: '/profile/:id'
       }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000,
+      }
     }
   ],
   transformers: {
