@@ -64,7 +64,7 @@ For Gridsome configurations and docs, check [Gridsome docs](https://gridsome.org
 
 ## License
 
-Licensed under [MIT](https://github.com/Microflash/microflash.github.io/blob/release/LICENSE.md).
+Licensed under [MIT](./LICENSE.md).
 
 ---
 
@@ -72,7 +72,7 @@ Licensed under [MIT](https://github.com/Microflash/microflash.github.io/blob/rel
 
 ### Acknowledgements
  
-This project would not have been possible without the open-source community, in general, and the following fantastic projects and people, in particular (not in any specific order):
+This project would not have been possible without the open-source community, in general, and the following projects and people, in particular (not in any specific order):
 
 - [Gridsome](https://gridsome.org/): a modern Vue.js framework for static websites (and more)
 - [Gridsome Portfolio Starter](https://github.com/drehimself/gridsome-portfolio-starter): a simple portfolio starter for Gridsome 
