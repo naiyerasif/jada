@@ -330,11 +330,9 @@ input {
   font-family: $font-family-base;
   font-size: $font-size;
 
-  &::placeholder {
-    opacity: $opacity-md;
-  }
-
+  &::placeholder,
   &::-moz-placeholder {
+    color: $text;
     opacity: $opacity-md;
   }
 }

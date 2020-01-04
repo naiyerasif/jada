@@ -9,6 +9,10 @@
   @include spacing($gap-base, resize($gap-base, 2.5));
   width: $width-full;
 
+  @include desktop {
+    padding-bottom: $gap-xxl;
+  }
+
   a {
     &:focus,
     &:hover {

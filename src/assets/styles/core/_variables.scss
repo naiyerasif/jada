@@ -51,12 +51,12 @@ $background-table: inherit !default;
 $background-table-even: $background-panel !default;
 $background-table-hover: $text-muted !default;
 
-$scrollbar-track: var(--background-scrollbar) !default;
-$scrollbar-thumb: $link !default;
-$scrollbar-button: $link-hover !default;
-
 $border: var(--border) !default;
 $border-panel: var(--border-panel) !default;
+
+$scrollbar-track: var(--background-scrollbar) !default;
+$scrollbar-thumb: $border-panel !default;
+$scrollbar-button: $background-panel-dim !default;
 
 // Spacing
 

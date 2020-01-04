@@ -41,6 +41,10 @@ export default {
   @include center(wrap, space-between);
   @include spacing;
 
+  @include desktop {
+    @include spacing($gap-xxl);
+  }
+
   .brand {
     line-height: $line-height-none;
 

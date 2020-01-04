@@ -13,13 +13,15 @@
         </g-link>
       </p>
     </Hero>
-    <Panel decorated>
-      <main v-html="$page.post.content" />
-    </Panel>
-    <Panel type="note">
-      <span>Spotted a mistake or want to improve this post?</span>
-      <a target="_blank" rel="noopener noreferrer" :href="$page.post.editUrl"><svg class="icon icon-edit" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg> Edit this page on GitHub!</a>
-    </Panel>
+    <div class="container">
+      <Panel decorated>
+        <main v-html="$page.post.content" />
+      </Panel>
+      <div class="edit">
+        <span>Spotted a mistake or want to improve this post?</span>
+        <a target="_blank" rel="noopener noreferrer" :href="$page.post.editUrl"><svg class="icon icon-edit" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg> Edit this page on GitHub!</a>
+      </div>
+    </div>
   </Layout>
 </template>
 
@@ -84,5 +86,17 @@ export default {
 
 .meta {
   font-size: $text-xs;
+}
+
+.edit {
+  @include spacing;
+  
+  & > a {
+    text-decoration: none;
+  }
+  
+  @include desktop {
+    @include spacing($gap-xl, $gap-xl);
+  }
 }
 </style>

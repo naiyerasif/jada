@@ -55,11 +55,11 @@
 }
 
 .matrix-tiny {
-  @include matrix(resize($gap-base, 10), $gap-base, false);
+  @include matrix(resize($gap-base, 10), $gap-base, 0, false);
 }
 
 .grid-base {
-  @include matrix(resize($gap-base, 22), $gap-base, $gap-base);
+  @include matrix(resize($gap-base, 20), $gap-base, 0);
 }
 
 .grid-large {

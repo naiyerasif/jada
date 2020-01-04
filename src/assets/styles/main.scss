@@ -27,6 +27,10 @@
 
 .article {
   background-color: $background-panel;
+
+  @include desktop {
+    padding: $gap-xxl;
+  }
 }
 
 .note {

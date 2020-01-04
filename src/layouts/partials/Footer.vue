@@ -48,6 +48,11 @@ export default {
 .footer {
   @include spacing;
 
+  @include desktop {
+    margin-top: $gap-xxl;
+    margin-bottom: $gap-xxl;
+  }
+
   .imprint {
     font-weight: $font-bold;
     font-size: $text-3xl;

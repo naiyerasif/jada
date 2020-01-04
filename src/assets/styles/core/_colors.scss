@@ -126,12 +126,12 @@ $rust: (
   --text-muted: #{navy(500)};
   --background-body: #{primary(100)};
   --background-body-dim: #{primary(200)};
-  --background-panel-vibrant: #{primary(200)};
+  --background-panel-vibrant: #{tint(primary(200), 25%)};
   --background-panel: #{tint(primary(300), 25%)};
   --background-panel-dim: #{primary(300)};
-  --background-scrollbar: #{rust(100)};
-  --border: #{primary(400)};
-  --border-panel: #{primary(300)};
+  --background-scrollbar: #{primary(200)};
+  --border: #{primary(500)};
+  --border-panel: #{tint(primary(400), 10%)};
 }
 
 // CSS properties for dark theme

@@ -118,6 +118,7 @@ export default {
 
   @include tab-landscape {
     width: resize($gap-base, 20);
+    border-color: $border-panel;
   }
 }
 
@@ -154,6 +155,7 @@ export default {
 
   @include tab-landscape {
     width: resize($gap-base, 26);
+    border-color: $border-panel;
   }
 
   .search-results {
@@ -196,6 +198,10 @@ export default {
         .search-result-summary {
           color: $text;
         }
+      }
+
+      @include tab-landscape {
+        border-color: $border-panel;
       }
 
       .search-result-summary {
