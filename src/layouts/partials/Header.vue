@@ -7,6 +7,7 @@
       </span>
     </button>
     <ul :class="isOpen ? 'visible': 'hidden'">
+      <li><Search /></li>
       <li><ThemeSwitcher /></li>
       <li><g-link to="/about">About</g-link></li>
     </ul>
@@ -14,10 +15,12 @@
 </template>
 
 <script>
+import Search from '~/components/Search'
 import ThemeSwitcher from '~/components/ThemeSwitcher'
 
 export default {
   components: {
+    Search,
     ThemeSwitcher
   },
   data() {
@@ -79,7 +82,6 @@ export default {
 
       li {
         padding: $gap-xs;
-        text-align: right;
       }
     }
 

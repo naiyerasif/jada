@@ -126,9 +126,11 @@ $rust: (
   --text-muted: #{navy(500)};
   --background-body: #{primary(100)};
   --background-body-dim: #{primary(200)};
+  --background-panel-vibrant: #{primary(200)};
   --background-panel: #{tint(primary(300), 25%)};
   --background-panel-dim: #{primary(300)};
   --background-scrollbar: #{rust(100)};
+  --border: #{primary(400)};
   --border-panel: #{primary(300)};
 }
 
@@ -139,8 +141,10 @@ $rust: (
   --text-muted: #{transparentize(primary(200), 0.5)};
   --background-body: #{secondary(900)};
   --background-body-dim: #{secondary(A100)};
+  --background-panel-vibrant: #{secondary(A300)};
   --background-panel: #{secondary(A200)};
   --background-panel-dim: #{secondary(A300)};
   --background-scrollbar: #{rust(900)};
+  --border: #{secondary(900)};
   --border-panel: #{secondary(800)};
 }

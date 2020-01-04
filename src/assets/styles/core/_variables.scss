@@ -43,6 +43,7 @@ $background-body: var(--background-body) !default;
 $background-body-dim: var(--background-body-dim) !default;
 $background-panel: var(--background-panel) !default;
 $background-panel-dim: var(--background-panel-dim) !default;
+$background-panel-vibrant: var(--background-panel-vibrant) !default;
 $background-code: $background-panel !default;
 $background-ins: $background-panel !default;
 $background-mark: $background-panel !default;
@@ -54,7 +55,7 @@ $scrollbar-track: var(--background-scrollbar) !default;
 $scrollbar-thumb: $link !default;
 $scrollbar-button: $link-hover !default;
 
-$border: $text-muted !default;
+$border: var(--border) !default;
 $border-panel: var(--border-panel) !default;
 
 // Spacing
