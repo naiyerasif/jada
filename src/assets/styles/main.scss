@@ -99,3 +99,17 @@
 .translucent {
   opacity: $opacity-sm;
 }
+
+.utilities {
+  @include spacing;
+  @include center(nowrap, flex-start);
+  
+  & > a {
+    text-decoration: none;
+    margin-right: $gap-base;
+  }
+  
+  @include desktop {
+    @include spacing($gap-xl, $gap-xl);
+  }
+}

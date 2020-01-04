@@ -49,7 +49,6 @@ export default {
   @include spacing;
 
   @include desktop {
-    margin-top: $gap-xxl;
     margin-bottom: $gap-xxl;
   }
 

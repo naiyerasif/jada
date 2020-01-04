@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Hero>
-      <h1>About</h1>
+      <h1 id="top">About</h1>
     </Hero>
     <div class="container">
       <Panel decorated>
@@ -23,6 +23,9 @@
           <li>Sitemap in XML</li>
         </ul>
       </Panel>
+      <div class="utilities">
+        <a href="#top"><svg class="icon icon-up" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg> Back to top</a>
+      </div>
     </div>
   </Layout>
 </template>
