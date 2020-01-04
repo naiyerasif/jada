@@ -4,6 +4,7 @@
   "url": "https://gridsome-jada.netlify.com",
   "favicon": "https://raw.githubusercontent.com/Microflash/jada/master/src/favicon.png",
   "maintainer": "Jada Zorebian",
+  "tocPattern": "Table of Contents",
   "searchConfig": {
     "file": {
       "dir": "static",

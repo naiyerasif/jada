@@ -38,7 +38,7 @@ export default {
 
 .reader-pane {
   @include desktop {
-    max-width: 50vw;
+    max-width: $expanse-middle;
   }
 }
 </style>

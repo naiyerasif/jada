@@ -18,8 +18,8 @@
         <main v-html="$page.post.content" />
       </Panel>
       <div class="edit">
-        <span>Spotted a mistake or want to improve this post?</span>
-        <a target="_blank" rel="noopener noreferrer" :href="$page.post.editUrl"><svg class="icon icon-edit" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg> Edit this page on GitHub!</a>
+        <a target="_blank" rel="noopener noreferrer" :href="$page.post.editUrl"><svg class="icon icon-edit" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg> Edit this page</a>
+        <a :href="jumpToTableOfContents"><svg class="icon icon-up" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg> Back to top</a>
       </div>
     </div>
   </Layout>
@@ -52,6 +52,7 @@ query Post ($path: String!) {
 <script>
 import Hero from '~/components/Hero'
 import Panel from '~/components/Panel'
+import siteConfig from '../../data/site.json'
 
 export default {
   metaInfo() {
@@ -67,6 +68,9 @@ export default {
     displayDate() {
       const published = `Published ${this.$page.post.date}`
       return !this.$page.post.hasOwnProperty('updated') ? published : (this.$page.post.updated !== this.$page.post.date ? `Updated ${this.$page.post.updated}` : published); 
+    },
+    jumpToTableOfContents() {
+      return `#${siteConfig.tocPattern.toLowerCase().replace(/ /g, '-')}`
     }
   }
 }
@@ -90,9 +94,11 @@ export default {
 
 .edit {
   @include spacing;
+  @include center(nowrap, start);
   
   & > a {
     text-decoration: none;
+    margin-right: $gap-base;
   }
   
   @include desktop {
