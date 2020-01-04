@@ -73,12 +73,6 @@ a {
     &:hover {
       color: $link-hover;
     }
-
-    @if $visited-links {
-      &:visited {
-        color: $link-visited;
-      }
-    }
   }
 
   @if $show-underline {

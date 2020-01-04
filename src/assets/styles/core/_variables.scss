@@ -26,9 +26,8 @@ $text-size-adjust: $proportion-full !default;
 
 // Colors
 
-$link: rust(400) !default;
-$link-hover: rust(600) !default;
-$link-visited: navy(500) !default;
+$link: tertiary(400) !default;
+$link-hover: tertiary(600) !default;
 $text: var(--text-default) !default;
 $text-muted: var(--text-muted) !default;
 $text-code: inherit !default;

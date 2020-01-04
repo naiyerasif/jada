@@ -43,46 +43,25 @@ $primary: (
 );
 
 $secondary: (
-  100: #b7b8b9,
-  200: #a8aaaa,
-  300: #9a9b9c,
-  400: #7f8182,
-  500: #676a6b,
-  600: #5c5f60,
-  700: #494c4d,
-  800: #37393b,
-  900: #2e3032,
-  A100: #242728,
-  A200: #1a1d1f,
-  A300: #0a0c0c,
-  A600: #ededee,
-  A700: #e2e2e3,
-  A800: #d5d6d6,
-  A900: #c6c7c7
-);
-
-// Complimentary Shades
-
-$navy: (
-  100: #c0c5ce,
-  200: #afb5c2,
-  300: #9fa6b7,
-  400: #717d98,
-  500: #4a5a80,
-  600: #334674,
-  700: #293c6e,
-  800: #1d3268,
-  900: #16295a,
-  A100: #142042,
-  A200: #0e1528,
-  A300: #030407,
+  100: #7f848f,
+  200: #727883,
+  300: #656c78,
+  400: #59606e,
+  500: #4e5665,
+  600: #444b5c,
+  700: #3a4253,
+  800: #2f384a,
+  900: #262e42,
+  A100: #1b2438,
+  A200: #11182a,
+  A300: #05070c,
   A600: #f5f6f7,
   A700: #e9ebee,
   A800: #e0e2e6,
   A900: #d3d6dd
 );
 
-$rust: (
+$tertiary: (
   100: #ea989c,
   200: #e8848a,
   300: #e57079,
@@ -111,19 +90,15 @@ $rust: (
   @return map-get($secondary, $variation);
 }
 
-@function navy($variation) {
-  @return map-get($navy, $variation);
-}
-
-@function rust($variation) {
-  @return map-get($rust, $variation);
+@function tertiary($variation) {
+  @return map-get($tertiary, $variation);
 }
 
 // CSS properties for light theme
 
 [data-theme="light"] {
   --text-default: #{tint($black, 20%)};
-  --text-muted: #{navy(500)};
+  --text-muted: #{secondary(700)};
   --background-body: #{primary(100)};
   --background-body-dim: #{primary(200)};
   --background-panel-vibrant: #{tint(primary(200), 25%)};
@@ -141,10 +116,10 @@ $rust: (
   --text-muted: #{shade(primary(200), 35%)};
   --background-body: #{secondary(A200)};
   --background-body-dim: #{secondary(A300)};
-  --background-panel-vibrant: #{shade(secondary(900), 25%)};
-  --background-panel: #{secondary(A200)};
-  --background-panel-dim: #{shade(secondary(A200), 30%)};
+  --background-panel-vibrant: #{shade(secondary(900), 20%)};
+  --background-panel: #{shade(secondary(A200), 15%)};
+  --background-panel-dim: #{shade(secondary(A200), 35%)};
   --background-scrollbar: #{secondary(A200)};
-  --border: #{secondary(900)};
-  --border-panel: #{secondary(800)};
+  --border: #{secondary(A100)};
+  --border-panel: #{secondary(900)};
 }
