@@ -8,14 +8,15 @@ const editConfigs = appConfig.editConfig.paths
 const { basePath, constructEditUrl } = editConfigs.filter(p => p.collection === 'Post')[0]
 
 module.exports = function (api) {
-  api.loadSource(({ addSchemaResolvers, getCollection }) => {
-    const posts = getCollection('Post')
-    posts.data().forEach(node => {
-      if (!node.updated) {
-        node.updated = node.date
-      }
-    })
 
+  api.onCreateNode(options => {
+    if (options.internal.typeName === 'Post' && !options.updated) {
+      options.updated = options.date
+    }
+    return { ...options }
+  })
+
+  api.loadSource(({ addSchemaResolvers }) => {
     addSchemaResolvers({
       Post: {
         blurb: {
