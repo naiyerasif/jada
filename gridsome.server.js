@@ -35,8 +35,8 @@ module.exports = function (api) {
     })
   })
 
-  api.beforeBuild(({ store }) => {
-    const { collection } = store.getCollection('Post')
+  api.beforeBuild(context => {
+    const collection = context._app.store.getCollection('Post')._collection
 
     const posts = collection.data.map(post => {
       return {
