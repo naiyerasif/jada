@@ -43,22 +43,22 @@ $primary: (
 );
 
 $secondary: (
-  100: #e5e9e9,
-  200: #d7dddd,
-  300: #c5cfce,
-  400: #a0b0af,
-  500: #7a9291,
-  600: #486d6a,
-  700: #396360,
-  800: #174e4b,
-  900: #024542,
-  A100: #0d3936,
-  A200: #0f2d2b,
-  A300: #0c1a19,
-  A600: #fffffe,
-  A700: #fafbfb,
-  A800: #f6f8f8,
-  A900: #f1f3f3
+  100: #b7b8b9,
+  200: #a8aaaa,
+  300: #9a9b9c,
+  400: #7f8182,
+  500: #676a6b,
+  600: #5c5f60,
+  700: #494c4d,
+  800: #37393b,
+  900: #2e3032,
+  A100: #242728,
+  A200: #1a1d1f,
+  A300: #0a0c0c,
+  A600: #ededee,
+  A700: #e2e2e3,
+  A800: #d5d6d6,
+  A900: #c6c7c7
 );
 
 // Complimentary Shades
@@ -137,14 +137,14 @@ $rust: (
 // CSS properties for dark theme
 
 [data-theme="dark"] {
-  --text-default: #{shade($white, 20%)};
-  --text-muted: #{transparentize(primary(200), 0.5)};
-  --background-body: #{secondary(900)};
-  --background-body-dim: #{secondary(A100)};
-  --background-panel-vibrant: #{secondary(A300)};
+  --text-default: #{shade(primary(100), 25%)};
+  --text-muted: #{shade(primary(200), 35%)};
+  --background-body: #{secondary(A200)};
+  --background-body-dim: #{secondary(A300)};
+  --background-panel-vibrant: #{shade(secondary(900), 25%)};
   --background-panel: #{secondary(A200)};
-  --background-panel-dim: #{secondary(A300)};
-  --background-scrollbar: #{rust(900)};
+  --background-panel-dim: #{shade(secondary(A200), 30%)};
+  --background-scrollbar: #{secondary(A200)};
   --border: #{secondary(900)};
   --border-panel: #{secondary(800)};
 }

@@ -10,7 +10,7 @@ A versatile blog starter for [Gridsome](https://gridsome.org/)
 
 ## Features
 
-- [ ] Accessible and responsive design
+- [x] Accessible and responsive design
 - [x] Support for blogging with markdown content
 - [x] Table of contents for blog posts
 - [x] Tags for blog posts

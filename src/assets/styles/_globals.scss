@@ -329,10 +329,11 @@ ul {
 input {
   font-family: $font-family-base;
   font-size: $font-size;
+  color: $text;
 
   &::placeholder,
   &::-moz-placeholder {
-    color: $text;
+    color: inherit;
     opacity: $opacity-md;
   }
 }

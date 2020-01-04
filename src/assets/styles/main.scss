@@ -52,6 +52,7 @@
   .card-header {
     font-weight: $font-normal;
     font-size: $text-xs;
+    margin-bottom: $gap-xs;
 
     & > a {
       text-decoration: none;
