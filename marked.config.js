@@ -3,6 +3,11 @@ const decode = require('unescape')
 const appConfig = require('./app.config')
 
 const whitespace = ' '
+const emptyspace = ''
+const defaultRenderer = new marked.Renderer()
+
+const stripTocRenderer = new marked.Renderer()
+stripTocRenderer.heading = (text, level, raw, slugger) => (text === appConfig.tocPattern) ? emptyspace : defaultRenderer.heading(text, level, raw, slugger)
 
 const plainTextRenderer = new marked.Renderer()
 plainTextRenderer.code = (code, infostring, escaped) => code + whitespace
@@ -50,5 +55,6 @@ const summarize = (content) => {
 }
 
 module.exports = {
-  summarize
+  summarize,
+  stripTocRenderer
 }

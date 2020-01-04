@@ -1,6 +1,8 @@
 const path = require('path')
 const autoprefixer = require('autoprefixer')
+const marked = require('marked')
 const appConfig = require('./app.config')
+const stripTocRenderer = require('./marked.config').stripTocRenderer
 
 const postcssPlugins = [
   autoprefixer()
@@ -59,6 +61,47 @@ module.exports = {
         baseDir: './profiles',
         template: './src/templates/Profile.vue',
         route: '/profile/:id'
+      }
+    },
+    {
+      use: 'gridsome-plugin-feed',
+      options: {
+        contentTypes: ['Post'],
+        feedOptions: {
+          title: appConfig.name,
+          description: appConfig.description,
+          id: appConfig.url,
+          link: appConfig.url,
+          image: appConfig.favicon,
+          copyright: appConfig.copyright,
+        },
+        rss: {
+          enabled: true,
+          output: '/feed.xml'
+        },
+        atom: {
+          enabled: false,
+          output: '/feed.atom'
+        },
+        json: {
+          enabled: false,
+          output: '/feed.json'
+        },
+        maxItems: 25,
+        htmlFields: ['content'],
+        nodeToFeedItem: (node) => ({
+          title: node.title,
+          date: node.date,
+          description: node.blurb,
+          author: [
+            {
+              name: `${appConfig.name}`,
+              email: appConfig.maintainer,
+              link: appConfig.url
+            }
+          ],
+          content: marked(node.content, { renderer: stripTocRenderer })
+        })
       }
     },
     {

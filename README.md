@@ -21,7 +21,7 @@ A versatile blog starter for [Gridsome](https://gridsome.org/)
 - [x] Syntax highlighting with [Shiki](https://github.com/octref/shiki)
 - [x] [Sass](https://sass-lang.com/) integration
 - [x] Theme Switcher for Dark and Light modes
-- [ ] Support for RSS, Atom and JSON feeds (By default, only RSS feed is generated.)
+- [x] Support for RSS, Atom and JSON feeds (By default, only RSS feed is generated.)
 - [x] Custom 404 page
 - [x] Sitemap in XML
 
