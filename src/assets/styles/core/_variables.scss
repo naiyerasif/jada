@@ -43,9 +43,9 @@ $background-body-dim: var(--background-body-dim) !default;
 $background-panel: var(--background-panel) !default;
 $background-panel-dim: var(--background-panel-dim) !default;
 $background-panel-vibrant: var(--background-panel-vibrant) !default;
-$background-code: $background-panel !default;
-$background-ins: $background-panel !default;
-$background-mark: $background-panel !default;
+$background-code: $background-panel-vibrant !default;
+$background-ins: $background-panel-vibrant !default;
+$background-mark: $background-panel-vibrant !default;
 $background-table: inherit !default;
 $background-table-even: $background-panel !default;
 $background-table-hover: $background-panel-dim !default;
@@ -79,5 +79,6 @@ $graphics: $gap-base !default;
 $graphics-sm: $gap-lg !default;
 
 $radius: $radius-base !default;
+$radius-sm: resize($radius-base, 0.5) !default;
 
 $width-full: $proportion-full !default;

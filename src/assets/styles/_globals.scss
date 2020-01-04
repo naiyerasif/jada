@@ -352,7 +352,7 @@ pre {
   background-color: $background-code;
   color: $text;
   font-size: 0.9em;
-  border-radius: $radius;
+  border-radius: $radius-sm;
 
   @if $custom-fonts {
     font-family: $font-family-fixed;
@@ -362,7 +362,7 @@ pre {
 code,
 kbd,
 samp {
-  padding: 0.1em 0.4em 0.2em;
+  padding: 0.2em 0.4em 0.2em;
 
   @if $custom-colors {
     color: $text-code;
@@ -370,13 +370,15 @@ samp {
 }
 
 pre {
-  overflow: auto;
-  padding: 1em 1.2em;
+  overflow: hidden;
+  border-radius: $radius;
 
   code {
+    display: block;
     background: none;
+    overflow: auto;
     border: none;
-    padding: 0;
+    padding: 1em 1.2em;
     font-size: 1em;
     line-height: 1em;
     white-space: pre;
