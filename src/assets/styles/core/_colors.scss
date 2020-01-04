@@ -100,7 +100,7 @@ $tertiary: (
   --text-default: #{tint($black, 20%)};
   --text-muted: #{secondary(700)};
   --background-body: #{primary(100)};
-  --background-body-dim: #{primary(200)};
+  --background-body-dim: #{primary(A900)};
   --background-panel-vibrant: #{tint(primary(200), 25%)};
   --background-panel: #{tint(primary(300), 25%)};
   --background-panel-dim: #{primary(300)};

@@ -3,13 +3,12 @@
     <section class="grid-base-cell">
       <h1 class="imprint">&#10077;{{ name }}&#10078;</h1>
       <p class="follow">Copyright &copy; {{ year }}</p>
-      <p class="follow">Source licensed under MIT</p>
-      <p class="follow">Content available under CC by SA</p>
+      <p class="follow">Source licensed under <a target="_blank" rel="noopener noreferrer" href="https://github.com/Microflash/jada/blob/master/LICENSE.md">MIT</a></p>
     </section>
     <section class="grid-base-cell">
-      <p class="lead">Legal</p>
+      <p class="lead">Resources</p>
       <p class="follow"><a target="_blank" rel="noopener noreferrer" href="https://github.com/Microflash/jada/issues/new">Report an issue</a></p>
-      <p class="follow"><a target="_blank" rel="noopener noreferrer" href="#">Privacy Policy</a></p>
+      <p class="follow"><a target="_blank" rel="noopener noreferrer" href="https://github.com/Microflash/jada">Documentation</a></p>
       <p class="follow"><a href="/sitemap.xml" title="Sitemap">Sitemap</a></p>
     </section>
     <section class="grid-base-cell">
