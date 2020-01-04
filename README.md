@@ -16,12 +16,12 @@ A versatile blog starter for [Gridsome](https://gridsome.org/)
 - [x] Tags for blog posts
 - [x] Pagination for blog posts
 - [x] Search with [Fuse.js](https://fusejs.io/) and [vue-fuse](https://github.com/shayneo/vue-fuse)
-- [x] Automated blurb generation for posts (Made possible by marked, can be overridden by manual blurb)
-- [x] GitHub URL generation for blog posts (Done through URL generation based on repository URL but can be configured with a custom implementation to cover other usecases)
+- [x] Automated blurb generation for posts
+- [x] GitHub URL generation for blog posts
 - [x] Syntax highlighting with [Shiki](https://github.com/octref/shiki)
 - [x] [Sass](https://sass-lang.com/) integration
 - [x] Theme Switcher for Dark and Light modes
-- [x] Support for RSS, Atom and JSON feeds (By default, only RSS feed is generated.)
+- [x] Support for RSS, Atom and JSON feeds
 - [x] Custom 404 page
 - [x] Sitemap in XML
 

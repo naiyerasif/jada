@@ -3,10 +3,8 @@
     <Hero>
       <h1>Page not found</h1>
     </Hero>
-    <div class="container">
-      <Panel>
-        <g-image src="../../static/404.svg" />
-      </Panel>
+    <div class="container expanded">
+      <g-image src="../../static/404.svg" />
     </div>
   </Layout>
 </template>
@@ -25,3 +23,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.expanded {
+  @include spacing;
+}
+</style>
