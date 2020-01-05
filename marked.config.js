@@ -1,7 +1,8 @@
 const marked = require('marked')
-const decode = require('unescape')
+const AllHtmlEntities = require('html-entities').AllHtmlEntities
 const appConfig = require('./app.config')
 
+const entities = new AllHtmlEntities()
 const whitespace = ' '
 const emptyspace = ''
 const defaultRenderer = new marked.Renderer()
@@ -51,7 +52,7 @@ const preprocess = (md) => {
 const summarize = (content) => {
   const markdown = preprocess(content)
   const plainText = marked(markdown, { renderer: plainTextRenderer, sanitize: false })
-  return decode(plainText)
+  return entities.decode(plainText)
 }
 
 module.exports = {

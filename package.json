@@ -21,11 +21,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.7.3",
+    "html-entities": "^1.2.1",
     "marked": "^0.8.0",
     "sass": "^1.24.0",
     "sass-loader": "^8.0.0",
-    "style-resources-loader": "^1.3.3",
-    "unescape": "^1.0.1"
+    "style-resources-loader": "^1.3.3"
   },
   "browserslist": [
     "defaults"
