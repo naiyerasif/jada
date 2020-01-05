@@ -13,7 +13,7 @@
 
 <page-query>
 query Posts ($page: Int) {
-  posts: allPost (sortBy: "date", order: DESC, perPage: 6, page: $page) @paginate {
+  posts: allPost (sortBy: "date", order: DESC, perPage: 4, page: $page) @paginate {
     totalCount
     pageInfo {
       totalPages
