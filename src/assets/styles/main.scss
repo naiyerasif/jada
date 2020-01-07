@@ -301,11 +301,15 @@ $hamburger-layer-spacing: 6px !default;
 
   @include tab-portrait {
     padding: $expanse-base $expanse-base 0;
-    width: 65vw;
-  }
+    justify-content: center;
 
-  @include desktop {
-    width: 30%;
+    .is-prev {
+      margin-right: $gap-lg;
+    }
+
+    .is-next {
+      margin-left: $gap-lg;
+    }
   }
 }
 

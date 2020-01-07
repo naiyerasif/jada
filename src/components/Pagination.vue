@@ -1,8 +1,8 @@
 <template>
   <section class="container pagination">
-    <g-link :to="previousPage(input.currentPage)" v-if="input.currentPage > 1">&larr; Prev</g-link>
+    <g-link class="is-prev" :to="previousPage(input.currentPage)" v-if="input.currentPage > 1">&larr; Prev</g-link>
     <div>page {{ input.currentPage }} of {{ input.totalPages }}</div>
-    <g-link :to="nextPage(input.currentPage, input.totalPages)" v-if="input.currentPage < input.totalPages">Next &rarr;</g-link>
+    <g-link class="is-next" :to="nextPage(input.currentPage, input.totalPages)" v-if="input.currentPage < input.totalPages">Next &rarr;</g-link>
   </section>
 </template>
 
