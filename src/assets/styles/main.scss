@@ -213,6 +213,7 @@ $hamburger-layer-spacing: 6px !default;
 
 .card {
   @include spacing;
+  height: inherit;
 
   @include tab-portrait {
     padding: $expanse-base;
