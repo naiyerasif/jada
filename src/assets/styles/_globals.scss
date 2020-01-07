@@ -353,7 +353,7 @@ pre {
   background-color: $background-code;
   color: $text;
   font-size: 0.9em;
-  border-radius: $radius-sm;
+  border-radius: $radius;
 
   @if $custom-fonts {
     font-family: $font-family-fixed;
