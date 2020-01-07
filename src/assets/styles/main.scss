@@ -245,6 +245,7 @@ $hamburger-layer-spacing: 6px !default;
 
 .article {
   font-size: $text-md;
+  width: 100%;
 
   @include desktop {
     width: $expanse-article;
