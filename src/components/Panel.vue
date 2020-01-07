@@ -21,24 +21,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.panel {
-  display: block;
-  overflow: hidden;
-  border-top: 1px solid $border-panel;
-  border-bottom: 1px solid $border-panel;
-
-  @include tab-portrait {
-    border-right: 1px solid $border-panel;
-    border-left: 1px solid $border-panel;
-    border-radius: $radius-base;
-  }
-}
-
-.reader-pane {
-  @include desktop {
-    max-width: $expanse-middle;
-  }
-}
-</style>

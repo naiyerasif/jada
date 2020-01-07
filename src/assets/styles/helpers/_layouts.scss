@@ -1,67 +1,33 @@
-// Matrixes and Grids
-// 
-// Based on CSS-grid with Flexbox fallback
-// By convention, `matrix-` classes are not responsive
-// while `grid-` classes are responsive
+// Grids
 
-@mixin matrix($cell-width, $gap: 0, $gap-lg-screen: 0, $responsive: true) {
-  & {
-    display: grid;
-    grid-gap: $gap;
+// generates a grid with cells of specified width
+$grid-border: 1px solid transparent;
 
-    @if $gap != $gap-lg-screen {
-      @include desktop {
-        grid-gap: $gap-lg-screen;
-      }
-    }
-
-    // flexbox fallback
-    display: flex;
-    flex-wrap: wrap;
-
-    display: grid;
-    
-    @if $responsive {
-      grid-template-columns: repeat(auto-fit, minmax(100vw, 1fr));
-    } @else {
-      grid-template-columns: repeat(auto-fit, minmax($cell-width, 1fr));
-    }
+@mixin matrix($width) {
+  display: flex;
+  flex-wrap: wrap;
+  
+  display: grid;
+  grid-template-columns: 100%;
+  
+  @include tab-landscape {
+    grid-template-columns: repeat(auto-fit, minmax($width, 1fr));
   }
-
-  @if $responsive {
-    @include tab-landscape {
-      grid-template-columns: repeat(auto-fit, minmax($cell-width, 1fr));
-    }
-  }
-
+  
   &-cell {
-    /* needed for the flex layout*/
-    flex: 1 1 $cell-width;
-    margin: $gap;
-
-    @if $gap != $gap-lg-screen {
-      @include desktop {
-        margin: $gap-lg-screen;
-      }
-    }
-  }
-
-  // Reset margin used by flexbox
-  @supports (display: grid) {
-    & > * {
-      margin: $gap-none;
-    }
+    flex: 1 1 $width;
   }
 }
 
-.matrix-tiny {
-  @include matrix(resize($gap-base, 10), $gap-base, 0, false);
+.grid-md {
+  @include matrix($cell-md);
 }
 
-.grid-base {
-  @include matrix(resize($gap-base, 20), $gap-base, 0);
-}
+.grid-lg {
+  @include matrix($cell-lg);
+  border: $grid-border;
 
-.grid-large {
-  @include matrix(resize($gap-base, 24), $gap-base, $gap-xl);
+  .grid-lg-cell {
+    border: $grid-border;
+  }
 }

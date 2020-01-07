@@ -15,9 +15,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.search-focal {
-  @include hide(true);
-}
-</style>

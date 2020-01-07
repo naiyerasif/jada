@@ -5,8 +5,8 @@ $white: hsl(0, 0%, 100%);
 
 // Colormix functions
 // 
-// Use `tint` instead of default `lighten`
-// Use `shade` instead of default `darken` 
+// use `tint` instead of default `lighten`
+// use `shade` instead of default `darken` 
 
 @function tint($color, $percentage) {
   @return mix($white, $color, $percentage);
@@ -18,10 +18,8 @@ $white: hsl(0, 0%, 100%);
 
 // Color palettes
 // 
-// Consists of three colors, where Ax00 variants are WCAG-accesible
-// complements of x00 colors
-// 
-// All the colors are in CIECAM02 color space
+// Ax00 variants are WCAG-accesible complements of x00 colors
+// all the colors are in CIECAM02 color space
 
 $primary: (
   100: #fef6e4,
@@ -107,6 +105,7 @@ $tertiary: (
   --background-scrollbar: #{primary(200)};
   --border: #{primary(500)};
   --border-panel: #{tint(primary(400), 10%)};
+  --border-search: #{shade(primary(300), 5%)};
 }
 
 // CSS properties for dark theme
@@ -114,12 +113,13 @@ $tertiary: (
 [data-theme="dark"] {
   --text-default: #{shade(primary(100), 25%)};
   --text-muted: #{shade(primary(200), 35%)};
-  --background-body: #{secondary(A200)};
+  --background-body: #{shade(secondary(A200), 30%)};
   --background-body-dim: #{secondary(A300)};
   --background-panel-vibrant: #{shade(secondary(900), 20%)};
-  --background-panel: #{shade(secondary(A200), 15%)};
+  --background-panel: #{shade(secondary(A200), 10%)};
   --background-panel-dim: #{shade(secondary(A200), 35%)};
   --background-scrollbar: #{secondary(A200)};
   --border: #{secondary(A100)};
   --border-panel: #{secondary(900)};
+  --border-search: #{secondary(900)};
 }

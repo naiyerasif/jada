@@ -1,10 +1,10 @@
 <template>
   <Layout>
-    <Hero>
+    <div class="container hero">
       <h1>
         #{{ $page.tag.title }}
       </h1>
-    </Hero>
+    </div>
     <Posts :posts="$page.tag.belongsTo.edges" />
     <Pagination v-if="$page.tag.belongsTo.pageInfo.totalPages > 1" :path="`/tag/${$page.tag.title}`" :input="$page.tag.belongsTo.pageInfo" />
   </Layout>
@@ -14,7 +14,7 @@
 query Tag ($id: ID!, $page: Int) {
   tag: tag (id: $id) {
     title
-    belongsTo (sortBy: "updated", order: DESC, page: $page, perPage: 10) @paginate {
+    belongsTo (sortBy: "updated", order: DESC, page: $page, perPage: 6) @paginate {
       totalCount
       pageInfo {
         totalPages
@@ -42,7 +42,6 @@ query Tag ($id: ID!, $page: Int) {
 </page-query>
 
 <script>
-import Hero from '~/components/Hero'
 import Posts from '~/components/Posts'
 import Pagination from '~/components/Pagination'
 
@@ -53,7 +52,6 @@ export default {
     }
   },
   components: {
-    Hero,
     Posts,
     Pagination
   }

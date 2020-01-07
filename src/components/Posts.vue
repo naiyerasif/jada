@@ -1,7 +1,7 @@
 <template>
-  <div class="container grid-large">
-    <div class="grid-large-cell" v-for="post in posts" :key="post.id">
-      <Panel type="card">
+  <div class="container grid-lg">
+    <div class="grid-lg-cell" v-for="post in posts" :key="post.id">
+      <div class="panel card">
         <div class="card-header">
           <g-link v-for="tag in post.node.tags" :key="tag.id" :to="tag.path">
             #{{ tag.title }}
@@ -12,19 +12,14 @@
           <h2 class="card-body">{{ post.node.title }}</h2>
           <p class="card-footer">{{ post.node.blurb | clip }} &hellip;</p>
         </g-link>
-      </Panel>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Panel from './Panel'
-
 export default {
   props: ['posts'],
-  components: {
-    Panel
-  },
   methods: {
     displayDate(post) {
       const published = `Published ${post.date}`

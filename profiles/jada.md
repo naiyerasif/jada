@@ -6,10 +6,7 @@ location: 'Bengaluru, India'
 avatar: './avatars/jada.png'
 ---
 
-import Panel from '~/components/Panel'
-
-<div class="container">
-  <Panel decorated>
+<main class="panel article">
 
 #### Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat ac felis donec et odio pellentesque diam volutpat commodo. Purus semper eget duis at tellus at urna. Id cursus metus aliquam eleifend mi. Suspendisse sed nisi lacus sed viverra tellus in hac habitasse. Tempus iaculis urna id volutpat lacus laoreet. Massa eget egestas purus viverra. Massa massa ultricies mi quis hendrerit dolor magna eget. Id eu nisl nunc mi ipsum. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Etiam sit amet nisl purus. Tortor condimentum lacinia quis vel. Egestas erat imperdiet sed euismod nisi. Gravida rutrum quisque non tellus orci ac auctor augue.
 
@@ -21,5 +18,4 @@ Sapien et ligula ullamcorper malesuada proin libero nunc consequat. Pellentesque
 
 Facilisi nullam vehicula ipsum a arcu cursus vitae congue. Augue eget arcu dictum varius duis at. Ullamcorper sit amet risus nullam eget felis. Vulputate enim nulla aliquet porttitor. Adipiscing bibendum est ultricies integer quis. Egestas quis ipsum suspendisse ultrices gravida dictum. Imperdiet proin fermentum leo vel orci. Sed felis eget velit aliquet sagittis id. Sociis natoque penatibus et magnis dis. Amet est placerat in egestas erat imperdiet sed. Nulla posuere sollicitudin aliquam ultrices sagittis orci a. Diam maecenas sed enim ut sem. Est placerat in egestas erat imperdiet. Auctor augue mauris augue neque gravida in fermentum.
 
-  </Panel>
-</div>
+</main>

@@ -1,5 +1,0 @@
-// Resize function
-
-@function resize($value, $factor) {
-  @return ($value * $factor);
-}

@@ -1,13 +1,15 @@
 <template>
   <Layout>
-    <Hero>
+    <div class="container hero">
       <h1>
-        Hello, I am <span id="about-me" class="emphasis">{{ firstName }}</span>
+        Hello, I am <span id="about-me" class="is-highlighted">{{ firstName }}</span>
         <br>a {{ $page.profile.role | lowerCase }}
         <br>from {{ $page.profile.location }}
       </h1>
-    </Hero>
-    <VueRemarkContent />
+    </div>
+    <div class="container">
+      <VueRemarkContent />
+    </div>
   </Layout>
 </template>
 
@@ -23,7 +25,6 @@ query Profile ($id: ID!) {
 </page-query>
 
 <script>
-import Hero from '~/components/Hero'
 
 export default {
   metaInfo() {
@@ -31,9 +32,6 @@ export default {
       title: this.$page.profile.name
     }
   },
-  components: {
-    Hero
-  }, 
   computed: {
     firstName() {
       return this.$page.profile.name.substr(0, this.$page.profile.name.indexOf(' '))

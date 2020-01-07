@@ -1,25 +1,28 @@
 <template>
   <Layout>
-    <Hero>
+    <div class="container hero">
       <h1>{{ $page.post.title }}</h1>
-      <p class="author" v-for="author in $page.post.authors" :key="author.id">
-        <g-image :alt="author.name" :src="author.avatar" class="icon" />
-        <g-link :to="author.path" class="profile">{{ author.name }}</g-link>
-      </p>
-      <p class="meta">
-        {{ displayDate }} ({{ $page.post.timeToRead }} min read) <span class="translucent">&sol;</span> 
-        <g-link :to="tag.path" v-for="tag in $page.post.tags" :key="tag.id">
-          #{{ tag.title }} 
-        </g-link>
-      </p>
-    </Hero>
+    </div>
     <div class="container">
-      <Panel decorated>
-        <main v-html="$page.post.content" />
-      </Panel>
-      <div class="utilities">
-        <a target="_blank" rel="noopener noreferrer" :href="$page.post.editUrl"><svg class="icon icon-edit" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg> Edit this page</a>
-        <a :href="jumpToTableOfContents"><svg class="icon icon-up" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg> Back to top</a>
+      <div class="post">
+        <main class="panel article" v-html="$page.post.content" />
+        <aside>
+          <p class="author" v-for="author in $page.post.authors" :key="author.id">
+            <g-image :alt="author.name" :src="author.avatar" class="icon" />
+            <g-link :to="author.path">{{ author.name }}</g-link>
+          </p>
+          <p>{{ displayDate }}</p>
+          <p>{{ $page.post.timeToRead }} min read</p>
+          <p>
+            <g-link :to="tag.path" v-for="tag in $page.post.tags" :key="tag.id">
+              #{{ tag.title }} 
+            </g-link>
+          </p>
+        </aside>
+      </div>
+      <div class="options">
+        <a target="_blank" rel="noopener noreferrer" :href="$page.post.editUrl"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon-edit"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg> Edit this page</a>
+        <a :href="jumpToTableOfContents"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon-up"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg> Back to top</a>
       </div>
     </div>
   </Layout>
@@ -50,7 +53,6 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
-import Hero from '~/components/Hero'
 import Panel from '~/components/Panel'
 import siteConfig from '../../data/site.json'
 
@@ -61,7 +63,6 @@ export default {
     }
   },
   components: {
-    Hero,
     Panel
   },
   computed: {
@@ -75,20 +76,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.author {
-  display: flex;
-  align-items: center;
-  margin-top: $gap-xs;
-  margin-bottom: $gap-xs;
-}
-
-.profile {
-  margin-left: $gap-xs;
-}
-
-.meta {
-  font-size: $text-xs;
-}
-</style>

@@ -1,11 +1,10 @@
 <template>
   <Layout>
-    <Hero>
+    <div class="container hero">
       <h1>
-        &mdash; A practical<br/>
-        blog starter for <a href="https://gridsome.org/" target="_blank" rel="noopener noreferrer">Gridsome</a>
+        &mdash; A practical blog starter for <a href="https://gridsome.org/" target="_blank" rel="noopener noreferrer">Gridsome</a>
       </h1>
-    </Hero>
+    </div>
     <Posts :posts="$page.posts.edges" />
     <Pagination v-if="$page.posts.pageInfo.totalPages > 1" :input="$page.posts.pageInfo" />
   </Layout>
@@ -13,7 +12,7 @@
 
 <page-query>
 query Posts ($page: Int) {
-  posts: allPost (sortBy: "date", order: DESC, perPage: 4, page: $page) @paginate {
+  posts: allPost (sortBy: "date", order: DESC, perPage: 6, page: $page) @paginate {
     totalCount
     pageInfo {
       totalPages
@@ -39,7 +38,6 @@ query Posts ($page: Int) {
 </page-query>
 
 <script>
-import Hero from '~/components/Hero'
 import Posts from '~/components/Posts'
 import Pagination from '~/components/Pagination'
 
@@ -48,7 +46,6 @@ export default {
     title: 'Home'
   },
   components: {
-    Hero,
     Posts,
     Pagination
   }

@@ -29,14 +29,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.pagination {
-  @include spacing;
-  @include center(nowrap, space-between);
-
-  @include desktop {
-    width: $expanse-centered;
-  }
-}
-</style>
