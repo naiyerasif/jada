@@ -15,6 +15,7 @@ A practical blog starter for [Gridsome](https://gridsome.org/)
 - [x] Table of contents for blog posts
 - [x] Tags for blog posts
 - [x] Pagination for blog posts
+- [x] Author profiles with [@gridsome/vue-remark](https://gridsome.org/plugins/@gridsome/vue-remark)
 - [x] Search with [Fuse.js](https://fusejs.io/) and [vue-fuse](https://github.com/shayneo/vue-fuse)
 - [x] Automated blurb generation for posts
 - [x] GitHub URL generation for blog posts
@@ -57,6 +58,40 @@ npm install
 You can directly [generate](https://github.com/Microflash/jada/generate) a new project from this repository on GitHub.
 
 ## Documentation
+
+### Configuration
+
+- [site.json](./data/site.json) contains the following configurations:
+  - `name`, `description`, `url`, `maintainer`: the name, description, url and maintainer of your blog. This configuration is used by Gridsome and its plugins.
+  - `favicon`: the URL of the favicon of your blog; used by `gridsome-plugin-feed` to set a favicon in the generated XML file.
+  - `tocPattern`: a `regex` pattern used to insert the table of contents in the blog posts; required by `remark-toc`. This configuration is also being used while generating the blurbs for the posts.
+  - `searchConfig`: contains `file` and `options` objects. `file` is used to customize the location of search index generated during build. `options` are the options to define the behavior of `fuse`. You can find the exhaustive list of options for `fuse` [here](https://fusejs.io/).
+- [app.config.js](./app.config.js) contains functions and objects required at build time.
+  - `copyright`: the copyright text generated using `name` (from `site.json`) and current year
+  - `blogDir`: the location of your blog content
+  - `editConfig`: this object contains configuration to generate edit URL for every collection; by default, `jada` has the configuration for GitHub edit URL generation for `Post` collection.
+- [marked.config.js](./marked.config.js) contains `summarize` function that generates the blurbs for posts and `stripTocRenderer` that strips the `tocPattern` from the markdown files while converting them to HTML. This HTML is then used to generate RSS feed.
+- [purgecss.config.js](./purgecss.config.js): the [configuration file](https://www.purgecss.com/configuration) for [purgecss](https://www.purgecss.com/) to strip down the unused CSS classes during the build.
+- [gridsome.config.js](./gridsome.config.js): the [project configuration](https://gridsome.org/docs/config/) file for Gridsome. This is where the various plugins are configured.
+- [gridsome.server.js](./gridsome.server.js): the [server configuration](https://gridsome.org/docs/server-api/) file for Gridsome. This file is used to customize the hooks to generate search index and add additional fields to `Post` collection.
+
+### Blurb Generation
+
+`marked`'s lexer is used to generate the blurb for a blog post. You can override this by adding a `blurb` field in the frontmatter. You can also customize the function in the [marked.config.js](./marked.config.js).
+
+There's a `clip` filter available in [main.js](./src/main.js) that you can use to display a part of your blurb on the list of posts. This is useful when the blurbs are too long.
+
+### Edit URL Generation
+
+The configuration for edit URL generation resides in [app.config.js](./app.config.js). By default, `jada` generates the GitHub edit URL for `Post` collection with edit branch pointing to `master`.
+
+### Search
+
+Search is supported through [fuse](https://fusejs.io/). `jada` generates a `search.json` file on every build which is queried by [axios](https://github.com/axios/axios) in the browser. By default, search index is created from the post title and the blurb.
+
+### Styles
+
+`jada` uses SASS to generate styles, with optimizations to improve the readability of posts through [remarkability](https://mflash.dev/remarkability/). The color palette for dark and light themes have been carefully chosen to provide good accessibility. [Leonardo](https://github.com/adobe/leonardo) and [Happy Hues](https://www.happyhues.co/) were used to generate the palette.
 
 ### Gridsome
 
