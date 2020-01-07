@@ -1,6 +1,6 @@
-# jada 
+# jada [![Netlify Status](https://api.netlify.com/api/v1/badges/ab389147-4a61-4967-967c-a2d3c0020f98/deploy-status)](https://app.netlify.com/sites/gridsome-jada/deploys)
 
-A versatile blog starter for [Gridsome](https://gridsome.org/)
+A practical blog starter for [Gridsome](https://gridsome.org/)
 
 ## Demo
 
