@@ -7,13 +7,8 @@
 </template>
 
 <script>
-import Panel from './Panel'
-
 export default {
   props: ['path', 'input'],
-  components: {
-    Panel
-  },
   computed: {
     base() {
       return this.path || ''

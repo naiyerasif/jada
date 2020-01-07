@@ -14,14 +14,9 @@
 </template>
 
 <script>
-import Panel from '~/components/Panel'
-
 export default {
   metaInfo: {
     title: 'Page not found'
-  },
-  components: {
-    Panel
   }
 }
 </script>

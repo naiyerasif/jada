@@ -53,7 +53,6 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
-import Panel from '~/components/Panel'
 import siteConfig from '../../data/site.json'
 
 export default {
@@ -61,9 +60,6 @@ export default {
     return {
       title: this.$page.post.title
     }
-  },
-  components: {
-    Panel
   },
   computed: {
     displayDate() {

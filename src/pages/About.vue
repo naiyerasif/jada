@@ -34,14 +34,9 @@
 </template>
 
 <script>
-import Panel from '~/components/Panel'
-
 export default {
   metaInfo: {
     title: 'About'
-  },
-  components: {
-    Panel
   }
 }
 </script>
