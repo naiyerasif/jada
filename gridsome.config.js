@@ -1,11 +1,16 @@
 const autoprefixer = require('autoprefixer')
+const purgecss = require('@fullhuman/postcss-purgecss')
 const marked = require('marked')
 const appConfig = require('./app.config')
 const stripTocRenderer = require('./marked.config').stripTocRenderer
 
-const postcssPlugins = [
-  autoprefixer()
-]
+const postcssPlugins = []
+
+if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
+
+postcssPlugins.push(autoprefixer({
+  cascade: false
+}))
 
 module.exports = {
   siteName: appConfig.name,
