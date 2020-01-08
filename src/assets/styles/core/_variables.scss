@@ -112,8 +112,8 @@ $elevation-md: 10 !default;
 
 // Colors
 
-$link: tertiary(400) !default;
-$link-hover: tertiary(600) !default;
+$link: var(--link-default) !default;
+$link-hover: var(--link-hover) !default;
 $text: var(--text-default) !default;
 $text-muted: var(--text-muted) !default;
 $text-code: inherit !default;
