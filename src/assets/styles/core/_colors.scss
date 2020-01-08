@@ -97,10 +97,10 @@ $tertiary: (
 [data-theme="light"] {
   --text-default: #{tint($black, 20%)};
   --text-muted: #{secondary(700)};
-  --background-body: #{primary(100)};
-  --background-body-dim: #{primary(A900)};
-  --background-panel-vibrant: #{tint(primary(200), 25%)};
-  --background-panel: #{tint(primary(300), 25%)};
+  --background-body: #{primary(A600)};
+  --background-body-dim: #{tint(primary(A900), 40%)};
+  --background-panel-vibrant: #{tint(primary(200), 15%)};
+  --background-panel: #{tint(primary(300), 30%)};
   --background-panel-dim: #{primary(300)};
   --background-scrollbar: #{primary(200)};
   --border: #{primary(500)};

@@ -76,11 +76,11 @@ a {
   }
 
   @if $show-underline {
-    @include underline;
+    text-decoration: underline;
   } @else {
     &:focus,
     &:hover {
-      @include underline;
+      text-decoration: underline;
     }
   }
 
