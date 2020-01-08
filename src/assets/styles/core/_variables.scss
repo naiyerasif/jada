@@ -47,6 +47,7 @@ $text-xs: 0.75rem !default;
 $text-sm: 0.875rem !default;
 $text-rg: 1rem !default;
 $text-md: 1.25rem !default;
+$text-lg: 1.5rem !default;
 $text-xl: 1.75rem !default;
 $text-2xl: 2rem !default;
 $text-3xl: 3rem !default;
@@ -82,17 +83,17 @@ $gap-xl: 2rem !default;
 $gap-2xl: 3rem !default;
 $gap-3xl: 5rem !default;
 
-$expanse-container: 90vw !default;
+$expanse-container: 75vw !default;
 $expanse-article: 60vw !default;
 $expanse-base: $gap-2xl !default;
 $expanse-search: $gap-sm !default;
-$margin: $gap-rg !default;
+$margin: $gap-lg !default;
 
 // radiuses
 $radius-sm: 0.25rem !default;
 $radius-rg: 0.5rem !default;
 
-$radius: $radius-rg !default;
+$radius: $radius-sm !default;
 
 // graphics
 $gfx-sm: 1.5rem !default;
