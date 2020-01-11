@@ -1,3 +1,5 @@
+@use "sass:color";
+@use "sass:map";
 // Monochrome
 
 $black: hsl(0, 0%, 0%);
@@ -9,11 +11,11 @@ $white: hsl(0, 0%, 100%);
 // use `shade` instead of default `darken` 
 
 @function tint($color, $percentage) {
-  @return mix($white, $color, $percentage);
+  @return color.mix($white, $color, $percentage);
 }
 
 @function shade($color, $percentage) {
-  @return mix($black, $color, $percentage);
+  @return color.mix($black, $color, $percentage);
 }
 
 // Color palettes
@@ -81,15 +83,15 @@ $tertiary: (
 // Conveniences for palette access
 
 @function primary($variation) {
-  @return map-get($primary, $variation);
+  @return map.get($primary, $variation);
 }
 
 @function secondary($variation) {
-  @return map-get($secondary, $variation);
+  @return map.get($secondary, $variation);
 }
 
 @function tertiary($variation) {
-  @return map-get($tertiary, $variation);
+  @return map.get($tertiary, $variation);
 }
 
 // CSS properties for light theme
