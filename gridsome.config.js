@@ -107,7 +107,7 @@ module.exports = {
   transformers: {
     remark: {
       plugins: [
-        ['gridsome-plugin-remark-shiki', { theme: 'nord', skipInline: true }],
+        ['gridsome-plugin-remark-shiki', { theme: 'monokai_dimmed', skipInline: true }],
         ['remark-toc', { heading: appConfig.tocPattern, maxDepth: 3, tight: true }]
       ],
       externalLinksTarget: '_blank',
