@@ -3,7 +3,7 @@
     <div class="container hero">
       <h1 id="top">About</h1>
     </div>
-    <div class="container">
+    <div class="container wrapper">
       <div class="post">
         <main class="panel article">
           <blockquote>A practical blog starter for <a href="https://gridsome.org/">Gridsome</a></blockquote>

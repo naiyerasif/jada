@@ -3,7 +3,7 @@
     <div class="container hero">
       <h1>{{ $page.post.title }}</h1>
     </div>
-    <div class="container">
+    <div class="container wrapper">
       <div class="post">
         <main class="panel article" v-html="$page.post.content" />
         <aside>
