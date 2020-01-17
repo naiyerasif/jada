@@ -229,7 +229,7 @@ $hamburger-layer-spacing: 6px !default;
 
   @include queries.tab-portrait {
     padding: variables.$expanse-base;
-    border-radius: variables.$radius;
+    border-radius: variables.$radius-rg;
   }
 
   &:hover, 
