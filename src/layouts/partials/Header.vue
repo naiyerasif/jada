@@ -1,7 +1,7 @@
 <template>
   <header class="container header">
     <g-link class="brand" to="/">
-      <g-image class="logo" src="../../../static/assets/images/logo.svg" alt="logo" />
+      <g-image src="../../../static/assets/images/logo.svg" alt="logo" />
     </g-link>
     <button class="hamburger hamburger-icon" :class="{ active: isOpen }" type="button" aria-label="Menu" @click="toggle">
       <span class="hamburger-box" aria-hidden="true">

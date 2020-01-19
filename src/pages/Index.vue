@@ -2,7 +2,7 @@
   <Layout>
     <div class="container hero">
       <h1>
-        &mdash; A practical blog starter for <a href="https://gridsome.org/" target="_blank" rel="noopener noreferrer">Gridsome</a>
+        A practical blog starter for <a href="https://gridsome.org/" target="_blank" rel="noopener noreferrer">Gridsome</a>
       </h1>
     </div>
     <Posts :posts="$page.posts.edges" />
