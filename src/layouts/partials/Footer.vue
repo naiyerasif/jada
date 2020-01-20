@@ -13,10 +13,10 @@
       <div class="is-lead">Resources</div>
       <ul class="is-footer-list">
         <li>
-          <a href="/feed.xml" title="Sitemap">RSS feed</a>
+          <a href="/feed.xml">RSS feed</a>
         </li>
         <li>
-          <a href="/sitemap.xml" title="Sitemap">Sitemap</a>
+          <a href="/sitemap.xml">Sitemap</a>
         </li>
         <li>
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/Microflash/jada">Documentation</a>

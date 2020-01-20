@@ -11,7 +11,7 @@
     <ul class="menu" :class="isOpen ? 'is-visible': 'is-hidden-on-phone'">
       <li><Search /></li>
       <li><ThemeSwitcher /></li>
-      <li><a href="https://github.com/Microflash/jada" title="Documentation at GitHub" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="https://github.com/Microflash/jada" target="_blank" rel="noopener noreferrer">GitHub</a></li>
       <li><g-link to="/about">About</g-link></li>
     </ul>
   </header>
