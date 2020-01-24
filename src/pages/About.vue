@@ -19,6 +19,7 @@
           <li>Syntax highlighting with <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/octref/shiki">Shiki</a></li>
           <li><a target="_blank" rel="nofollow noopener noreferrer" href="https://sass-lang.com/">Sass</a> integration</li>
           <li>Theme Switcher for Dark and Light modes</li>
+          <li>Import SVGs as Vue components with <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/egoist/svg-to-vue-component">svg-to-vue-component</a></li>
           <li>Support for RSS, Atom and JSON feeds</li>
           <li>Custom 404 page</li>
           <li>Sitemap in XML</li>

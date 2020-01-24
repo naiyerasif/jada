@@ -22,6 +22,7 @@ A practical blog starter for [Gridsome](https://gridsome.org/)
 - [x] Syntax highlighting with [Shiki](https://github.com/octref/shiki)
 - [x] [Sass](https://sass-lang.com/) integration
 - [x] Theme Switcher for Dark and Light modes
+- [x] Import SVGs as Vue components with [svg-to-vue-component](https://github.com/egoist/svg-to-vue-component)
 - [x] Support for RSS, Atom and JSON feeds
 - [x] Custom 404 page
 - [x] Sitemap in XML
@@ -116,6 +117,7 @@ This project would not have been possible without the open-source community, in 
 - [Feather Icons](https://feathericons.com/): beautiful open-source icons
 - [Remarkability](https://mflash.dev/remarkability/): the baseline css for HTML generated from markdown
 - [Hamburgers](https://github.com/jonsuh/hamburgers): a collection of tasty CSS-animated hamburger icons
+- [Animate.css](https://github.com/daneden/animate.css): a cross-browser library of CSS animations
 - [Grid By Example](https://gridbyexample.com/): a collection of examples and references on CSS Grid maintained by [Rachel Andrews](https://rachelandrew.co.uk/)
 - [Leonardo](https://github.com/adobe/leonardo): an adaptive color scale generator developed by Adobe
 - [Happy Hues](https://www.happyhues.co/): a collection of color palettes by [Mackenzie Child](https://www.mackenziechild.me/)
