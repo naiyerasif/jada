@@ -1,0 +1,111 @@
+@use "../core/variables";
+@use "queries";
+
+// Grids
+
+// generates a grid with cells of specified width
+
+@mixin matrix($width, $gap: 0, $gap-phone: 0, $gap-tab-portrait: 0, $gap-tab-landscape: 0, $gap-desktop: 0, $gap-widescreen: 0) {
+  display: flex;
+  flex-wrap: wrap;
+  
+  display: grid;
+
+  @if $gap > 0 {
+    grid-gap: $gap;
+  }
+  
+  @if $gap-phone > 0 {
+    @include queries.phone {
+      grid-gap: $gap-phone;
+    }
+  }
+
+  @if $gap-tab-portrait > 0 {
+    @include queries.tab-portrait {
+      grid-gap: $gap-tab-portrait;
+    }
+  }
+
+  @if $gap-tab-landscape > 0 {
+    @include queries.tab-landscape {
+      grid-gap: $gap-tab-landscape;
+    }
+  }
+
+  @if $gap-desktop > 0 {
+    @include queries.desktop {
+      grid-gap: $gap-desktop;
+    }
+  }
+
+  @if $gap-widescreen > 0 {
+    @include queries.widescreen {
+      grid-gap: $gap-widescreen;
+    }
+  }
+  
+  grid-template-columns: 100%;
+  
+  @include queries.tab-landscape {
+    grid-template-columns: repeat(auto-fit, minmax($width, 1fr));
+  }
+  
+  &-cell {
+    flex: 1 1 $width;
+
+    @if $gap > 0 {
+      margin: $gap;
+    }
+
+    @if $gap-phone > 0 {
+      @include queries.phone {
+        margin: $gap-phone;
+      }
+    }
+
+    @if $gap-tab-portrait > 0 {
+      @include queries.tab-portrait {
+        margin: $gap-tab-portrait;
+      }
+    }
+
+    @if $gap-tab-landscape > 0 {
+      @include queries.tab-landscape {
+        margin: $gap-tab-landscape;
+      }
+    }
+
+    @if $gap-desktop > 0 {
+      @include queries.desktop {
+        margin: $gap-desktop;
+      }
+    }
+
+    @if $gap-widescreen > 0 {
+      @include queries.widescreen {
+        margin: $gap-widescreen;
+      }
+    }
+
+    height: 100%;
+  }
+
+  @supports (display: grid) {
+    & > * {
+      margin: 0;
+    }
+  }
+}
+
+.grid-md {
+  @include matrix(variables.$cell-md, $gap-phone: variables.$gap-rg);
+}
+
+.grid-lg {
+  @include matrix(variables.$cell-lg, $gap-phone: variables.$gap-md, $gap-tab-portrait: variables.$gap-lg, $gap-tab-landscape: variables.$gap-xl, $gap-widescreen: variables.$gap-2xl);
+
+  @include queries.tab-landscape {
+    max-width: variables.$expanse-xl;
+  }
+}

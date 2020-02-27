@@ -1,0 +1,25 @@
+import '~/assets/styles/main.scss'
+
+import VueFuse from 'vue-fuse'
+import { AllHtmlEntities } from 'html-entities'
+import DefaultLayout from '~/layouts/Default.vue'
+import * as siteConfig from '../app.config'
+
+export default function (Vue, { router, head, isClient }) {
+  Vue.component('Layout', DefaultLayout)
+
+  const entities = new AllHtmlEntities()
+  Vue.filter('clip', (value) => entities.decode(value.replace(/^(.{240}[^\s]*).*/, '$1')))
+
+  Vue.use(VueFuse)
+
+  head.meta.push({
+    name: 'author',
+    content: siteConfig.maintainer
+  })
+
+  head.meta.push({
+    name: 'description',
+    content: siteConfig.description
+  })
+}
