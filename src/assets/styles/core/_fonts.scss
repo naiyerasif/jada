@@ -1,6 +1,7 @@
 @use 'sass:list';
 @use 'sass:map';
 @use 'sass:meta';
+
 $default-formats: ('woff2', 'woff');
 
 @function _contains($list, $values...) {

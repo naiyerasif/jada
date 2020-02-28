@@ -1,86 +1,79 @@
 @use 'sass:color';
 @use 'sass:map';
-// Monochrome
-
-$black: hsl(0, 0%, 0%);
-$white: hsl(0, 0%, 100%);
-
-// Colormix functions
-// 
-// use `tint` instead of default `lighten`
-// use `shade` instead of default `darken` 
-
-@function tint($color, $percentage) {
-  @return color.mix($white, $color, $percentage);
-}
-
-@function shade($color, $percentage) {
-  @return color.mix($black, $color, $percentage);
-}
 
 // Color palettes
 // 
 // Ax00 variants are WCAG-accesible complements of x00 colors
 // all the colors are in CIECAM02 color space
 
+$monochrome: (
+  A500: hsl(0, 0%, 100%),
+  A600: hsl(0, 0%, 96%),
+  A700: hsl(0, 0%, 91%),
+  A800: hsl(0, 0%, 85%),
+  A900: hsl(0, 0%, 78%),
+  100: hsl(0, 0%, 71%),
+  200: hsl(0, 0%, 63%),
+  300: hsl(0, 0%, 56%),
+  400: hsl(0, 0%, 50%),
+  500: hsl(0, 0%, 44%),
+  600: hsl(0, 0%, 38%),
+  700: hsl(0, 0%, 33%),
+  800: hsl(0, 0%, 28%),
+  900: hsl(0, 0%, 24%),
+  A100: hsl(0, 0%, 19%),
+  A200: hsl(0, 0%, 15%),
+  A300: hsl(0, 0%, 9%),
+  A400: hsl(0, 0%, 0%)
+);
+
 $primary: (
-  100: #c0b7a2,
-  200: #b8ae9b,
-  300: #a79f8d,
-  400: #978f80,
-  500: #888174,
-  600: #797468,
-  700: #6d685d,
-  800: #615c54,
-  900: #55524a,
-  A100: #4b4741,
-  A200: #403d38,
-  A300: #2e2c28,
-  A600: #f8f3e5,
-  A700: #f3e6cb,
-  A800: #e9dcc2,
-  A900: #dacfb6
+  A500: #fcf8f8,
+  A600: #f8f0f0,
+  A700: #f5e3e3,
+  A800: #f3d0cf,
+  A900: #f0b9b7,
+  100: #eea19f,
+  200: #ec8686,
+  300: #e96b6c,
+  400: #e54c54,
+  500: #e0253d,
+  600: #c12d3a,
+  700: #a52f36,
+  800: #8c2e32,
+  900: #742b2c,
+  A100: #602627,
+  A200: #4b2121,
+  A300: #371919,
+  A400: #1a0d0c
 );
 
 $secondary: (
-  100: #a8b1ad,
-  200: #9faaa5,
-  300: #8f9c96,
-  400: #818f88,
-  500: #73827c,
-  600: #697770,
-  700: #5e6b65,
-  800: #56605b,
-  900: #4d5551,
-  A100: #454c49,
-  A200: #3c4240,
-  A300: #2e3230,
-  A600: #f3f4f4,
-  A700: #dfe2e1,
-  A800: #ccd1cf,
-  A900: #b6bebb
-);
-
-$tertiary: (
-  100: #f29f90,
-  200: #f18875,
-  300: #ef705c,
-  400: #ec5641,
-  500: #d74d3a,
-  600: #be4938,
-  700: #a84536,
-  800: #944032,
-  900: #813b2f,
-  A100: #71352b,
-  A200: #602f27,
-  A300: #4c2721,
-  A600: #f9f2f0,
-  A700: #f6e3df,
-  A800: #f5d6d1,
-  A900: #f4c5bc
+  A500: #fbfaf3,
+  A600: #f9f2da,
+  A700: #f8e6b6,
+  A800: #f1d691,
+  A900: #ddc587,
+  100: #c9b47c,
+  200: #b5a272,
+  300: #a29168,
+  400: #90815e,
+  500: #807355,
+  600: #70664c,
+  700: #625a44,
+  800: #554e3c,
+  900: #484234,
+  A100: #3c382c,
+  A200: #312d24,
+  A300: #24211b,
+  A400: #11100d
 );
 
 // Conveniences for palette access
+
+@function mono($variation) {
+  @return map.get($monochrome, $variation);
+}
 
 @function primary($variation) {
   @return map.get($primary, $variation);
@@ -90,42 +83,55 @@ $tertiary: (
   @return map.get($secondary, $variation);
 }
 
-@function tertiary($variation) {
-  @return map.get($tertiary, $variation);
+$black: mono(A400);
+$white: mono(A500);
+
+// Colormix functions
+// 
+// use `tint` instead of default `lighten`
+// use `shade` instead of default `darken` 
+// use `fade` instead of default `transparentize`
+
+@function tint($color, $percentage) {
+  @return color.mix($white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return color.mix($black, $color, $percentage);
+}
+
+@function fade($color, $transparency: 1) {
+  @return color.adjust($color, $alpha: -($transparency));
+}
+
+@function vibrant($color, $vibrance) {
+  @return color.adjust($color, $saturation: $vibrance);
 }
 
 // CSS properties for light theme
 
 [data-theme='light'] {
-  --text-default: #{tint($black, 20%)};
-  --text-muted: #{secondary(700)};
-  --link-default: #{color.scale(tertiary(600), $saturation: 15%, $lightness: -15%)};
-  --link-hover: #{color.scale(tertiary(800), $saturation: 15%)};
-  --background-body: #{primary(A600)};
-  --background-body-dim: #{tint(primary(A700), 20%)};
-  --background-panel-vibrant: #{color.scale(primary(A900), $saturation: 25%, $lightness: 5%)};
-  --background-panel: #{primary(A800)};
-  --background-panel-dim: #{color.scale(primary(A900), $saturation: 15%, $lightness: 5%)};
-  --background-scrollbar: #{color.scale(primary(A900), $saturation: 10%)};
-  --border: #{primary(500)};
-  --border-panel: #{color.scale(primary(100), $saturation: 10%)};
-  --border-search: #{primary(A700)};
+  --color-muted: #{secondary(800)};
+  --color-pronounced: #{vibrant(secondary(500), 50%)};
+  --color-default: #{$black};
+  --color-link: #{primary(500)};
+  --color-hovered-link: #{primary(600)};
+  --background-default: #{$white};
+  --background-auxiliary: #{secondary(A600)};
+  --background-muted: #{tint(secondary(A700), 50%)};
+  --scrollbar: #{secondary(A900)};
 }
 
 // CSS properties for dark theme
 
 [data-theme='dark'] {
-  --text-default: #{shade(primary(100), 10%)};
-  --text-muted: #{shade(primary(200), 25%)};
-  --link-default: #{color.scale(tertiary(400), $lightness: 5%)};
-  --link-hover: #{tertiary(600)};
-  --background-body: #{color.scale(secondary(A200), $saturation: 5%, $lightness: -35%)};
-  --background-body-dim: #{color.scale(secondary(A300), $saturation: 5%, $lightness: -35%)};
-  --background-panel-vibrant: #{shade(secondary(A200), 20%)};
-  --background-panel: #{color.scale(secondary(A200), $saturation: 5%, $lightness: -60%)};
-  --background-panel-dim: #{color.scale(secondary(A300), $saturation: 5%, $lightness: -60%)};
-  --background-scrollbar: #{secondary(A200)};
-  --border: #{secondary(A100)};
-  --border-panel: #{secondary(900)};
-  --border-search: #{secondary(900)};
+  --color-muted: #{secondary(400)};
+  --color-pronounced: #{secondary(300)};
+  --color-default: #{shade(secondary(A600), 20%)};
+  --color-link: #{primary(400)};
+  --color-hovered-link: #{primary(300)};
+  --background-default: #{mono(A300)};
+  --background-auxiliary: #{mono(A400)};
+  --background-muted: #{mono(A200)};
+  --scrollbar: #{mono(900)};
 }
