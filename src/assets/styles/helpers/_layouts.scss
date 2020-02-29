@@ -70,7 +70,3 @@
 .grid-md {
   @include matrix(variables.$cell-md);
 }
-
-.grid-rg {
-  @include matrix(variables.$cell-rg);
-}

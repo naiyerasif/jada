@@ -315,6 +315,33 @@
   }
 }
 
+// Pagination
+
+.pagination {
+  @include layouts.flex;
+  @include layouts.hspace(variables.$hgap);
+  margin-bottom: variables.$gap-lg;
+  z-index: 15;
+
+  .is-prev,
+  .is-next {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .is-prev {
+    margin-right: variables.$gap-lg;
+  }
+
+  .is-next {
+    margin-left: variables.$gap-lg;
+  }
+
+  & > a {
+    text-decoration: none;
+  }
+}
+
 // Icons
 
 .icon {
