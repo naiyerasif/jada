@@ -342,6 +342,33 @@
   }
 }
 
+// Footer
+
+.footer {
+  @include layouts.flex;
+
+  @include queries.within-tab-landscape {
+    justify-content: flex-start;
+  }
+
+  nav > * {
+    display: block;
+  }
+
+  .grid-sm {
+    @include layouts.vspace(variables.$vgap);
+  }
+
+  .is-lead {
+    font-weight: variables.$weight-semibold;
+    margin-bottom: variables.$gap-rg;
+  }
+
+  .is-separated {
+    margin-right: variables.$gap-sm;
+  }
+}
+
 // Icons
 
 .icon {
