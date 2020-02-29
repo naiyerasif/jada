@@ -14,15 +14,15 @@
   }
 }
 
-// // Derived Media Queries
-// // 
-// // `phone` is the default breakpoint
+// Derived Media Queries
+// 
+// `phone` is the default breakpoint
 
-// @mixin phone {
-//   @include within(variables.$breakpoint-sm) {
-//     @content;
-//   }
-// }
+@mixin phone {
+  @include within(variables.$breakpoint-sm) {
+    @content;
+  }
+}
 
 @mixin within-tab-landscape {
   @include within(variables.$breakpoint-md) {

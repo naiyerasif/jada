@@ -44,6 +44,8 @@ $text-xl: 1.75rem !default;
 $font-size: $text-rg !default;
 $text-size-adjust: 100% !default;
 
+$font-size-post: calc(1rem + 1vw) !default;
+$font-size-post-meta: calc(0.8rem + 0.2vw) !default;
 $font-size-title: calc(1.5rem + 1vw) !default;
 $font-size-subtitle: calc(0.75rem + 1vw) !default;
 
@@ -67,6 +69,7 @@ $gap-3xl: 5rem !default;
 
 $margin: $gap-lg !default;
 $gap: $gap-rg !default;
+$hgap-sm: calc(2vw + 1rem) !default;
 $hgap: calc(4vw + 1rem) !default;
 $vgap: calc(2vw + 1rem) !default;
 $canvas: 50vw !default;
@@ -91,8 +94,8 @@ $radius-md: 1.5rem !default;
 $radius-lg: 2rem !default;
 
 $radius: $radius-2xs !default;
-$image-radius: $radius-xs !default;
-$codeblock-radius: $radius-xs !default;
+$image-radius: $radius !default;
+$codeblock-radius: $radius !default;
 
 $opacity: 0.5 !default;
 

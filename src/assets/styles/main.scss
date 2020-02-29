@@ -214,6 +214,10 @@
   @include layouts.flex($justify: space-around);
   flex-direction: column;
   background-color: variables.$background-auxiliary;
+
+  @include queries.within-tab-landscape {
+    align-items: flex-start;
+  }
 }
 
 .title {
@@ -251,6 +255,63 @@
     height: variables.$gfx-avatar;
     width: variables.$gfx-avatar;
     border-radius: 50%;
+  }
+}
+
+// Article and Posts
+
+.article, .posts {
+  @include layouts.flex;
+  flex-direction: column;
+
+  @include queries.within-tab-landscape {
+    align-items: flex-start;
+  }
+}
+
+.main {
+  @extend .canvas;
+  font-size: 1.0625rem;
+}
+
+.article-actions {
+  margin-top: variables.$vgap;
+
+  & > a {
+    text-decoration: none;
+    margin-right: variables.$gap-rg;
+  }
+}
+
+.post {
+  margin-bottom: variables.$hgap-sm;
+
+  a {
+    text-decoration: none;
+  }
+
+  &:focus .post-body,
+  &:focus .post-footer,
+  &:hover .post-body,
+  &:hover .post-footer {
+    color: inherit;
+  }
+
+  .post-header,
+  .post-footer {
+    font-size: variables.$font-size-post-meta;
+  }
+
+  .post-header {
+    margin-bottom: variables.$gap-xs;
+  }
+
+  .post-body {
+    font-size: variables.$font-size-post;
+  }
+
+  .post-footer {
+    color: variables.$text-muted;
   }
 }
 
@@ -319,4 +380,10 @@ h6 {
 
 .is-primary {
   color: variables.$link;
+}
+
+// Layout
+
+.layout {
+  overflow-x: hidden;
 }
