@@ -288,13 +288,13 @@
 
   a {
     text-decoration: none;
-  }
 
-  &:focus .post-body,
-  &:focus .post-footer,
-  &:hover .post-body,
-  &:hover .post-footer {
-    color: inherit;
+    &:focus .post-body,
+    &:focus .post-footer,
+    &:hover .post-body,
+    &:hover .post-footer {
+      color: inherit;
+    }
   }
 
   .post-header,

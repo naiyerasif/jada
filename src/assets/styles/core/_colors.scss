@@ -125,10 +125,10 @@ $white: mono(A500);
 // CSS properties for dark theme
 
 [data-theme='dark'] {
-  --color-muted: #{secondary(400)};
+  --color-muted: #{mono(300)};
   --color-pronounced: #{secondary(300)};
-  --color-default: #{shade(secondary(A600), 20%)};
-  --color-link: #{primary(400)};
+  --color-default: #{shade(secondary(A500), 30%)};
+  --color-link: #{primary(500)};
   --color-hovered-link: #{primary(300)};
   --background-default: #{mono(A300)};
   --background-auxiliary: #{mono(A400)};
