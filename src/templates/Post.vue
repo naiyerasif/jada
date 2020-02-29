@@ -1,23 +1,25 @@
 <template>
   <Layout>
     <div class="container hero">
-      <div class="metadata">
-        <div class="metadata-item">
-          <div class="metadata-author" v-for="author in $page.post.authors" :key="author.id">
-            <g-image :alt="author.name" :src="author.avatar" />
-            <g-link :to="author.path">{{ author.name }}</g-link>
+      <section class="canvas">
+        <div class="metadata">
+          <div class="metadata-item">
+            <div class="metadata-author" v-for="author in $page.post.authors" :key="author.id">
+              <g-image :alt="author.name" :src="author.avatar" />
+              <g-link :to="author.path">{{ author.name }}</g-link>
+            </div>
+          </div>
+          <div class="separator"></div>
+          <div class="metadata-item" v-html="displayDate"></div>
+          <div class="separator"></div>
+          <div class="metadata-item">{{ $page.post.timeToRead }} min read</div>
+          <div class="separator"></div>
+          <div class="metadata-item">
+            <g-link :to="tag.path" v-for="tag in $page.post.tags" :key="tag.id">#{{ tag.title }} </g-link>
           </div>
         </div>
-        <div class="separator"></div>
-        <div class="metadata-item" v-html="displayDate"></div>
-        <div class="separator"></div>
-        <div class="metadata-item">{{ $page.post.timeToRead }} min read</div>
-        <div class="separator"></div>
-        <div class="metadata-item">
-          <g-link :to="tag.path" v-for="tag in $page.post.tags" :key="tag.id">#{{ tag.title }} </g-link>
-        </div>
-      </div>
-      <h1>{{ $page.post.title }}</h1>
+        <h1 class="title">{{ $page.post.title }}</h1>
+      </section>
     </div>
     <div class="container article">
       <main class="main" v-html="$page.post.content" />

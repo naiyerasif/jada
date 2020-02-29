@@ -111,7 +111,7 @@ $white: mono(A500);
 // CSS properties for light theme
 
 [data-theme='light'] {
-  --color-muted: #{secondary(800)};
+  --color-muted: #{secondary(700)};
   --color-pronounced: #{vibrant(secondary(500), 50%)};
   --color-default: #{$black};
   --color-link: #{primary(500)};

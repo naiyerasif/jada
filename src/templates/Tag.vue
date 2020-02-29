@@ -1,7 +1,11 @@
 <template>
   <Layout>
     <div class="container hero">
-      <h1>#{{ $page.tag.title }}</h1>
+      <section class="canvas">
+        <h1 class="title">
+          #{{ $page.tag.title }}
+        </h1>
+      </section>
     </div>
     <Posts :posts="$page.tag.belongsTo.edges" />
     <Pagination v-if="$page.tag.belongsTo.pageInfo.totalPages > 1" :path="`/tag/${$page.tag.title}`" :input="$page.tag.belongsTo.pageInfo" />

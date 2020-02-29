@@ -22,6 +22,14 @@
   @include layouts.hspace(variables.$hgap);
 }
 
+.canvas-fluid {
+  @include layouts.canvas;
+}
+
+.canvas {
+  @include layouts.canvas(false);
+}
+
 // Header
 
 .header {
@@ -200,6 +208,52 @@
   }
 }
 
+// Hero
+
+.hero {
+  @include layouts.flex($justify: space-around);
+  flex-direction: column;
+  background-color: variables.$background-auxiliary;
+}
+
+.title {
+  font-size: variables.$font-size-title;
+}
+
+.subtitle {
+  font-size: variables.$font-size-subtitle;
+  color: variables.$text-muted;
+}
+
+.metadata {
+  @include layouts.flex($justify: flex-start);
+  flex-direction: row;
+}
+
+.metadata-author {
+  @include layouts.flex($justify: flex-start);
+
+  img { 
+    height: variables.$gfx-rg;
+    width: variables.$gfx-rg;
+    border-radius: 50%;
+  }
+
+  a {
+    margin-left: variables.$gap-xs;
+  }
+}
+
+.metadata-author-avatar {
+  @include layouts.flex($justify: flex-start);
+
+  img {
+    height: variables.$gfx-avatar;
+    width: variables.$gfx-avatar;
+    border-radius: 50%;
+  }
+}
+
 // Icons
 
 .icon {
@@ -241,4 +295,28 @@ h6 {
       outline: none;
     }
   }
+}
+
+// Active links
+
+.active {
+  text-decoration: underline dotted;
+}
+
+// Separator
+
+.separator {
+  opacity: variables.$opacity;
+  padding-right: variables.$gap-xs;
+  padding-left: variables.$gap-xs;
+
+  &::after {
+    content: variables.$indicator-separator;
+  }
+}
+
+// Custom emphasis
+
+.is-primary {
+  color: variables.$link;
 }

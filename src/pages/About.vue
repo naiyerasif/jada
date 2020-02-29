@@ -1,7 +1,14 @@
 <template>
   <Layout>
     <div class="container hero">
-      <h1 id="top">About this starter</h1>
+      <section class="canvas">
+        <h1 class="title" id="top">
+          About this starter
+        </h1>
+        <div class="subtitle">
+          A list of features provided by <strong>Jada</strong>
+        </div>
+      </section>
     </div>
     <div class="container article">
       <main class="main">

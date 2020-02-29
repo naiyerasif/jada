@@ -1,9 +1,14 @@
 <template>
   <Layout>
     <div class="container hero">
-      <h1>
-        A practical blog starter for <a href="https://gridsome.org/" target="_blank" rel="noopener noreferrer">Gridsome</a>
-      </h1>
+      <section class="canvas">
+        <h1 class="title">
+          A blog starter for <a href="https://gridsome.org/" target="_blank" rel="noopener noreferrer">Gridsome</a>
+        </h1>
+        <div class="subtitle">
+          with Markdown support, search, profiles and more&hellip;
+        </div>
+      </section>
     </div>
     <Posts :posts="$page.posts.edges" />
     <Pagination v-if="$page.posts.pageInfo.totalPages > 1" :input="$page.posts.pageInfo" />

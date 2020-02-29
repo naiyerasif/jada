@@ -44,6 +44,9 @@ $text-xl: 1.75rem !default;
 $font-size: $text-rg !default;
 $text-size-adjust: 100% !default;
 
+$font-size-title: calc(1.5rem + 1vw) !default;
+$font-size-subtitle: calc(0.75rem + 1vw) !default;
+
 // Spacing
 
 $line-height: 1.6 !default;
@@ -66,7 +69,7 @@ $margin: $gap-lg !default;
 $gap: $gap-rg !default;
 $hgap: calc(4vw + 1rem) !default;
 $vgap: calc(2vw + 1rem) !default;
-$canvas: 60vw !default;
+$canvas: 50vw !default;
 
 $cell-sm: 14rem !default;
 $cell-md: 16rem !default;
@@ -75,6 +78,8 @@ $cell-rg: 25vw !default;
 $gfx-xs: 1rem !default;
 $gfx-sm: 1.5rem !default;
 $gfx-rg: 2rem !default;
+
+$gfx-avatar: calc(3.5rem + 4vw) !default;
 
 // Display
 
