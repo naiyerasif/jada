@@ -24,11 +24,11 @@
 //   }
 // }
 
-// @mixin tab-portrait {
-//   @include beyond(variables.$breakpoint-sm) {
-//     @content;
-//   }
-// }
+@mixin within-tab-landscape {
+  @include within(variables.$breakpoint-md) {
+    @content;
+  }
+}
 
 @mixin tab-landscape {
   @include beyond(variables.$breakpoint-md) {
