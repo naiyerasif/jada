@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="container hero">
-      <section class="canvas">
+      <section class="profile canvas">
         <div class="metadata">
           <div class="metadata-item">
             <div class="metadata-author-avatar">
@@ -9,11 +9,13 @@
             </div>
           </div>
         </div>
-        <h1 class="title">
-          Hello, I'm <span class="is-primary">{{ firstName }}</span> 
-        </h1>
-        <div class="subtitle">
-          a {{ $page.profile.role | lowerCase }} from {{ $page.profile.location }}
+        <div class="intro">
+          <h1 class="title">
+            Hello, I'm <span class="is-primary">{{ firstName }}</span> 
+          </h1>
+          <div class="subtitle">
+            a {{ $page.profile.role | lowerCase }} from {{ $page.profile.location }}
+          </div>
         </div>
       </section>
     </div>

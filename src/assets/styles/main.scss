@@ -251,12 +251,17 @@
 
 .metadata-author-avatar {
   @include layouts.flex($justify: flex-start);
+  margin-right: variables.$gap-lg;
 
   img {
     height: variables.$gfx-avatar;
     width: variables.$gfx-avatar;
     border-radius: 50%;
   }
+}
+
+.profile {
+  @include layouts.flex($justify: flex-start);
 }
 
 // Article and Posts
