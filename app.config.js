@@ -1,6 +1,6 @@
 module.exports = {
   name: 'Jada',
-  description: 'A versatile blog starter for Gridsome',
+  description: 'A blog starter for Gridsome',
   url: 'https://gridsome-jada.netlify.com',
   favicon: 'https://raw.githubusercontent.com/Microflash/jada/master/src/favicon.png',
   maintainer: 'Jada Zorebian',

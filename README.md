@@ -79,6 +79,8 @@ You can directly [generate](https://github.com/Microflash/jada/generate) a new p
 
 A global `clip` filter is available to dynamically trim the blurb length.
 
+> By default, `clip` trims first 240 characters of a text. Optionally, it accepts a numeric value, e.g., `clip(200)`, to clip the specified number of characters.
+
 ### Generating Edit URLs
 
 The `editConfig` key in [app.config.js](./app.config.js) provides an array of collection-specific configurations, including

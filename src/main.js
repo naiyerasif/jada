@@ -9,7 +9,11 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
 
   const entities = new AllHtmlEntities()
-  Vue.filter('clip', (value) => entities.decode(value.replace(/^(.{240}[^\s]*).*/, '$1')))
+  Vue.filter('clip', (value, size) => {
+    const clipSize = size || 240
+    const regex = new RegExp(`^(.{${clipSize}}[^\s]*).*`)
+    return entities.decode(value.replace(regex, '$1'))
+  })
 
   Vue.use(VueFuse)
 
