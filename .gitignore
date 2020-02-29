@@ -1,7 +1,0 @@
-.cache
-.spec
-.vscode
-dist
-node_modules
-src/.temp
-static/search.json
