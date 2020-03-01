@@ -280,6 +280,10 @@
 .main {
   @extend .canvas;
   font-size: 1.0625rem;
+
+  & > p:first-of-type {
+    font-size: variables.$font-size-intro;
+  }
 }
 
 .article-actions {
