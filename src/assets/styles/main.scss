@@ -197,6 +197,8 @@
     color: variables.$text-muted;
   }
 
+  .search-result:focus,
+  .search-result:hover,
   .search-result-highlighted {
     .search-result-title {
       color: variables.$link-hover;
