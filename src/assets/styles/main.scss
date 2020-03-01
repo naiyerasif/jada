@@ -290,7 +290,9 @@
   margin-top: calc(4vw + 2.5rem);
 
   & > a {
+    display: inline-block;
     text-decoration: none;
+    margin-top: variables.$gap-rg;
     margin-right: variables.$gap-rg;
   }
 }
