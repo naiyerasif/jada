@@ -69,6 +69,27 @@ $secondary: (
   A400: #11100d
 );
 
+$tertiary: (
+  A500: #f8f9fa,
+  A600: #f1f2f4,
+  A700: #e5e7ea,
+  A800: #d4d8dc,
+  A900: #c1c7ce,
+  100: #aeb6c0,
+  200: #9ba5b2,
+  300: #8794a4,
+  400: #768497,
+  500: #65758c,
+  600: #566882,
+  700: #475c78,
+  800: #39506e,
+  900: #33455d,
+  A100: #2c3a4c,
+  A200: #252e3c,
+  A300: #1c232c,
+  A400: #0e1115
+);
+
 // Conveniences for palette access
 
 @function mono($variation) {
@@ -81,6 +102,10 @@ $secondary: (
 
 @function secondary($variation) {
   @return map.get($secondary, $variation);
+}
+
+@function tertiary($variation) {
+  @return map.get($tertiary, $variation);
 }
 
 $black: mono(A400);
@@ -111,11 +136,11 @@ $white: mono(A500);
 // CSS properties for light theme
 
 [data-theme='light'] {
-  --color-muted: #{secondary(700)};
+  --color-muted: #{tertiary(600)};
   --color-pronounced: #{vibrant(secondary(500), 50%)};
   --color-default: #{$black};
-  --color-link: #{primary(500)};
-  --color-hovered-link: #{primary(600)};
+  --color-link: #{shade(primary(500), 5%)};
+  --color-hovered-link: #{primary(700)};
   --background-default: #{$white};
   --background-auxiliary: #{secondary(A600)};
   --background-muted: #{tint(secondary(A700), 50%)};
@@ -125,13 +150,13 @@ $white: mono(A500);
 // CSS properties for dark theme
 
 [data-theme='dark'] {
-  --color-muted: #{mono(300)};
+  --color-muted: #{tertiary(400)};
   --color-pronounced: #{secondary(300)};
   --color-default: #{shade(secondary(A500), 30%)};
   --color-link: #{primary(400)};
   --color-hovered-link: #{primary(300)};
-  --background-default: #{mono(A300)};
-  --background-auxiliary: #{mono(A400)};
-  --background-muted: #{mono(A200)};
-  --scrollbar: #{mono(900)};
+  --background-default: #{shade(tertiary(A300), 30%)};
+  --background-auxiliary: #{tertiary(A400)};
+  --background-muted: #{tertiary(A300)};
+  --scrollbar: #{tertiary(A200)};
 }

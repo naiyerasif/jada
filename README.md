@@ -96,7 +96,7 @@ Search is supported through [fuse](https://fusejs.io/). `jada` generates a `sear
 
 ### Styles
 
-`jada` uses SASS to generate styles, with optimizations to improve the readability of posts through [remarkability](https://mflash.dev/remarkability/). The color palette for dark and light themes have been carefully chosen to provide good accessibility. [Leonardo](https://github.com/adobe/leonardo) and [Happy Hues](https://www.happyhues.co/) were used to generate the palette.
+`jada` uses SASS to generate styles, with optimizations to improve the readability of posts through [remarkability](https://mflash.dev/remarkability/). The color palette for dark and light themes have been carefully chosen to provide good accessibility. [Leonardo](https://github.com/adobe/leonardo) was used to generate the palettes.
 
 ### Gridsome
 
@@ -121,7 +121,6 @@ This project is made possible thanks to the open-source community and the follow
 - [Animate.css](https://github.com/daneden/animate.css): a cross-browser library of CSS animations
 - [Grid By Example](https://gridbyexample.com/): a collection of examples and references on CSS Grid maintained by [Rachel Andrews](https://rachelandrew.co.uk/)
 - [Leonardo](https://github.com/adobe/leonardo): an adaptive color scale generator developed by Adobe
-- [Happy Hues](https://www.happyhues.co/): a collection of color palettes by [Mackenzie Child](https://www.mackenziechild.me/)
 
 ### Notes
 

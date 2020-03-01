@@ -103,7 +103,7 @@
   display: flex;
   background-color: variables.$background-muted;
   padding: variables.$gap-xs variables.$gap-rg;
-  border: 1px solid variables.$background-auxiliary;
+  border: 1px solid variables.$border;
   border-radius: variables.$radius;
 
   @include queries.tab-landscape {
@@ -112,15 +112,15 @@
 }
 
 .remove-bottom-border {
-  border-bottom-color: transparent;
-  border-bottom-right-radius: unset;
-  border-bottom-left-radius: unset;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom: 1px inset transparent;
 }
 
 .remove-top-border {
-  border-top-color: transparent;
-  border-top-right-radius: unset;
-  border-top-left-radius: unset;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top: 1px inset transparent;
 }
 
 .search {
