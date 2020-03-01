@@ -3,6 +3,7 @@ title: 'Express middleware using TypeScript'
 date: 2019-01-12 12:21:33
 updated: 2019-11-13 09:23:11
 authors: [jada]
+outdated: 'out-of-date'
 tags: ['guide', 'express', 'typescript']
 ---
 

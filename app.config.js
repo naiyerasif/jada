@@ -4,9 +4,13 @@ module.exports = {
   url: 'https://gridsome-jada.netlify.com',
   favicon: 'https://raw.githubusercontent.com/Microflash/jada/master/src/favicon.png',
   maintainer: 'Jada Zorebian',
-  tocPattern: 'Table of Contents',
   copyright: `Copyright ${new Date().getFullYear()} ${this.name}`,
-  blogDir: 'content/blog/',
+  prefs: {
+    tocPattern: 'Table of Contents',
+    blogDir: 'content/blog/',
+    blurbSize: 251,
+    outdationPeriod: 365 // in days
+  },
   editConfig: {
     paths: [
       {

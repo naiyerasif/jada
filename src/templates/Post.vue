@@ -22,7 +22,10 @@
       </section>
     </div>
     <div class="container article">
-      <main class="main" v-html="$page.post.content" />
+      <div class="content">
+        <blockquote class="is-primary" v-if="outdationMessage">{{ outdationMessage }}</blockquote>
+        <main class="main" v-html="$page.post.content" />
+      </div>
       <div class="article-actions">
         <a target="_blank" rel="noopener noreferrer" :href="$page.post.editUrl">
           <IconEdit class="icon" /> Edit this page
@@ -53,6 +56,7 @@ query Post ($path: String!) {
     content
     path
     timeToRead
+    outdated
     editUrl
     tags {
       title
@@ -85,7 +89,14 @@ export default {
       return !this.$page.post.hasOwnProperty('updated') ? published : (this.$page.post.updated !== this.$page.post.date ? `Updated <time>${this.$page.post.updated}</time>` : published); 
     },
     jumpToTableOfContents() {
-      return `#${siteConfig.tocPattern.toLowerCase().replace(/ /g, '-')}`
+      return `#${siteConfig.prefs.tocPattern.toLowerCase().replace(/ /g, '-')}`
+    },
+    outdationMessage() {
+      let warning = null
+      if (!['#', 'never'].includes(this.$page.post.outdated)) {
+        warning = `This post is marked as ${this.$page.post.outdated}. Some information may be inaccurate.`
+      }
+      return warning
     }
   }
 }

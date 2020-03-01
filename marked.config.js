@@ -8,7 +8,7 @@ const emptyspace = ''
 const defaultRenderer = new marked.Renderer()
 
 const stripTocRenderer = new marked.Renderer()
-stripTocRenderer.heading = (text, level, raw, slugger) => (text === appConfig.tocPattern) ? emptyspace : defaultRenderer.heading(text, level, raw, slugger)
+stripTocRenderer.heading = (text, level, raw, slugger) => (text === appConfig.prefs.tocPattern) ? emptyspace : defaultRenderer.heading(text, level, raw, slugger)
 
 const plainTextRenderer = new marked.Renderer()
 plainTextRenderer.code = (code, infostring, escaped) => code + whitespace
@@ -32,12 +32,12 @@ plainTextRenderer.image = (href, title, text) => whitespace
 plainTextRenderer.text = (text) => text
 
 const preprocess = (md) => {
-  const limit = 251
+  const limit = appConfig.prefs.blurbSize
   const tokens = marked.lexer(md)
   let markdown = ''
   let shouldStop = false
   for (token of tokens) {
-    if (shouldStop || markdown.length > limit || token.text === appConfig.tocPattern) break
+    if (shouldStop || markdown.length > limit || token.text === appConfig.prefs.tocPattern) break
     if (markdown !== '' && token.type === 'heading') shouldStop = true
     if (token.type !== 'heading' && token.text) {
       markdown = markdown + token.text.trim()

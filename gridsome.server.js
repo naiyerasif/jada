@@ -1,17 +1,24 @@
 const path = require('path')
 const fs = require('fs')
 const { GraphQLString } = require('gridsome/graphql')
+const moment = require('moment')
 const appConfig = require('./app.config')
 const summarize = require('./marked.config').summarize
 
 const editConfigs = appConfig.editConfig.paths
 const { basePath, constructEditUrl } = editConfigs.filter(p => p.collection === 'Post')[0]
 
+const outdationDate = appConfig.prefs.outdationPeriod ? moment().clone().subtract(appConfig.prefs.outdationPeriod, 'days').startOf('day') : null
+
 module.exports = function (api) {
 
   api.onCreateNode(options => {
     if (options.internal.typeName === 'Post' && !options.updated) {
       options.updated = options.date
+    }
+
+    if (options.internal.typeName === 'Post' && !options.outdated && !['never'].includes(options.outdated)) {
+      options.outdated = outdationDate && moment(options.updated, 'YYYY-MM-DD HH:mm:ss').isBefore(outdationDate) ? 'old' : '#'
     }
     return { ...options }
   })

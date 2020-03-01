@@ -24,6 +24,7 @@
     "autoprefixer": "^9.7.4",
     "html-entities": "^1.2.1",
     "marked": "^0.8.0",
+    "moment": "^2.24.0",
     "sass": "^1.26.1",
     "sass-loader": "^8.0.2",
     "svg-to-vue-component": "^0.3.8"
