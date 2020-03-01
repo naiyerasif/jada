@@ -281,7 +281,7 @@
 }
 
 .article-actions {
-  margin-top: variables.$vgap;
+  margin-top: calc(4vw + 2.5rem);
 
   & > a {
     text-decoration: none;

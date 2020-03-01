@@ -44,10 +44,10 @@
   display: grid;
   grid-gap: $gutter;
   
-  grid-template-columns: 100%;
+  grid-template-columns: repeat(auto-fill, minmax($width, 1fr));
   
-  @include queries.tab-landscape {
-    grid-template-columns: repeat(auto-fill, minmax($width, 1fr));
+  @include queries.phone {
+    grid-template-columns: 100%;
   }
   
   &-cell {
