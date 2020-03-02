@@ -107,7 +107,7 @@
   border-radius: variables.$radius;
 
   @include queries.tab-landscape {
-    width: 22rem;
+    width: calc(18rem + 10vw);
   }
 }
 
