@@ -70,7 +70,7 @@ query Post ($path: String!) {
 import IconEdit from '~/assets/images/icon-edit.svg'
 import IconList from '~/assets/images/icon-list.svg'
 import IconUp from '~/assets/images/icon-up.svg'
-import * as siteConfig from '../../app.config'
+import * as appConfig from '../../app.config'
 
 export default {
   metaInfo() {
@@ -89,7 +89,7 @@ export default {
       return !this.$page.post.hasOwnProperty('updated') ? published : (this.$page.post.updated !== this.$page.post.date ? `Updated <time>${this.$page.post.updated}</time>` : published); 
     },
     jumpToTableOfContents() {
-      return `#${siteConfig.prefs.tocPattern.toLowerCase().replace(/ /g, '-')}`
+      return `#${appConfig.prefs.tocPattern.toLowerCase().replace(/ /g, '-')}`
     },
     outdationMessage() {
       let warning = null

@@ -3,7 +3,7 @@ import '~/assets/styles/main.scss'
 import VueFuse from 'vue-fuse'
 import { AllHtmlEntities } from 'html-entities'
 import DefaultLayout from '~/layouts/Default.vue'
-import * as siteConfig from '../app.config'
+import * as appConfig from '../app.config'
 
 export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
@@ -19,11 +19,11 @@ export default function (Vue, { router, head, isClient }) {
 
   head.meta.push({
     name: 'author',
-    content: siteConfig.maintainer
+    content: appConfig.maintainer
   })
 
   head.meta.push({
     name: 'description',
-    content: siteConfig.description
+    content: appConfig.description
   })
 }

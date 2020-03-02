@@ -30,9 +30,9 @@ import axios from 'axios'
 import SearchFocal from './SearchFocal'
 import IconSearch from '~/assets/images/icon-search.svg'
 import IconClear from '~/assets/images/icon-clear.svg'
-import * as siteConfig from '../../app.config'
+import * as appConfig from '../../app.config'
 
-const searchConfig = siteConfig.searchConfig
+const searchConfig = appConfig.searchConfig
 
 export default {
   components: {
