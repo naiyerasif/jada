@@ -215,6 +215,7 @@
 .hero {
   @include layouts.flex($justify: space-around);
   flex-direction: column;
+  @include layouts.vspace(variables.$hgap);
   background-color: variables.$background-auxiliary;
 
   @include queries.within-tab-landscape {
