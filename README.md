@@ -22,7 +22,7 @@ A blog starter for [Gridsome](https://gridsome.org/)
 - Syntax highlighting (with [Shiki](https://github.com/octref/shiki))
 - Dark and light themes with [Sass](https://sass-lang.com/) and theme-switching support
 - SVGs as Vue components (with [svg-to-vue-component](https://github.com/egoist/svg-to-vue-component))
-- RSS, Atom and JSON feeds (with [gridsome-plugin-feed](https://github.com/onecrayon/gridsome-plugin-feed))
+- RSS, Atom and JSON feeds (with [@microflash/gridsome-plugin-feed](https://github.com/Microflash/gridsome-plugin-feed))
 - Sitemap (with [plugin-sitemap](https://github.com/gridsome/gridsome/tree/master/packages/plugin-sitemap))
 
 ## Installation

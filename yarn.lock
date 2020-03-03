@@ -910,6 +910,16 @@
     log-update "^2.3.0"
     p-map "^1.2.0"
 
+"@microflash/gridsome-plugin-feed@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@microflash/gridsome-plugin-feed/-/gridsome-plugin-feed-1.0.3.tgz#2eea63ab7383a90e61ce12f735e7bf31ff9de596"
+  integrity sha512-MoQIntqbJ6u/QEqJCsLihDMA4ZrsjSAVOMgFU57GbaSgvxaxkQ09WEzLCTyGJcxvZbeq06VExE6v1S0pq8ESNQ==
+  dependencies:
+    feed "^4.1.0"
+    fs-extra "^8.1.0"
+    micromatch "^4.0.2"
+    moment "^2.24.0"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -3646,7 +3656,7 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
-feed@^4.0.0:
+feed@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/feed/-/feed-4.1.0.tgz#58f1c9cc2b44715d14ac59234e1bf20c5d757aa7"
   integrity sha512-dAXWXM8QMxZ1DRnAxDmy1MaWZFlh1Ku7TU3onbXgHrVJynsxkNGPUed1AxszVW8AXo43xExronVkIqK+ACsoBA==
@@ -4238,16 +4248,6 @@ gray-matter@^4.0.2:
     kind-of "^6.0.2"
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
-
-gridsome-plugin-feed@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gridsome-plugin-feed/-/gridsome-plugin-feed-1.0.2.tgz#d991cd761435bbc2643ac2f402e3e60983741c9c"
-  integrity sha512-jmN7X++5JjIiWldplMUTozny/GFR6BFrq4HpU+Qc+KQKB+wilM9IG0MxnVeIOBXVQ2Pu5Wz7evaL5x9/FWqrRQ==
-  dependencies:
-    feed "^4.0.0"
-    fs-extra "^8.1.0"
-    micromatch "^4.0.2"
-    moment "^2.24.0"
 
 gridsome-plugin-remark-shiki@^0.3.1:
   version "0.3.1"

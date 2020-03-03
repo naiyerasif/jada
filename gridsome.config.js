@@ -58,7 +58,7 @@ module.exports = {
       }
     },
     {
-      use: 'gridsome-plugin-feed',
+      use: '@microflash/gridsome-plugin-feed',
       options: {
         contentTypes: ['Post'],
         feedOptions: {

@@ -26,7 +26,7 @@
           <li>Syntax highlighting (with <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/octref/shiki">Shiki</a>)</li>
           <li>Dark and light themes with <a target="_blank" rel="nofollow noopener noreferrer" href="https://sass-lang.com/">Sass</a> and theme-switching support</li>
           <li>SVGs as Vue components (with <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/egoist/svg-to-vue-component">svg-to-vue-component</a>)</li>
-          <li>RSS, Atom and JSON feeds (with <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/onecrayon/gridsome-plugin-feed">gridsome-plugin-feed</a>)</li>
+          <li>RSS, Atom and JSON feeds (with <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/Microflash/gridsome-plugin-feed">@microflash/gridsome-plugin-feed</a>)</li>
           <li>Sitemap (with <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/gridsome/gridsome/tree/master/packages/plugin-sitemap">plugin-sitemap</a>)</li>
         </ul>
       </main>
