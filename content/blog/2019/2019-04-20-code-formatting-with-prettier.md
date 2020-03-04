@@ -12,8 +12,6 @@ tags: ['gist', 'prettier']
 
 Any Node.js project can be used to follow this example.
 
-### Table of Contents
-
 ## Install Prettier
 
 Let's start by executing the following command in the directory where `package.json` is located:

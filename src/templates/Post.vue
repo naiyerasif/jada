@@ -23,6 +23,7 @@
     </div>
     <div class="container article">
       <div class="content">
+        <Contents :headers="$page.post.headings" />
         <blockquote class="is-primary" v-if="outdationMessage">{{ outdationMessage }}</blockquote>
         <main class="main" v-html="$page.post.content" />
       </div>
@@ -47,6 +48,11 @@ query Post ($path: String!) {
     title
     date (format: "MMM D, Y")
     updated (format: "MMM D, Y")
+    headings {
+      depth
+      value
+      anchor
+    }
     authors {
       id
       name
@@ -67,6 +73,7 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
+import Contents from '~/components/Contents'
 import IconEdit from '~/assets/images/icon-edit.svg'
 import IconList from '~/assets/images/icon-list.svg'
 import IconUp from '~/assets/images/icon-up.svg'
@@ -79,6 +86,7 @@ export default {
     }
   },
   components: {
+    Contents,
     IconEdit,
     IconList,
     IconUp

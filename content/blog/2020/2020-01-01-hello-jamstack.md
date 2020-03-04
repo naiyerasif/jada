@@ -11,8 +11,6 @@ JAM stands for JavaScript, API & Markup. According to Mathias Biilmann (CEO & Co
 
 A JAMstack app can be built using by hand, or with [Gridsome](https://gridsome.org), Jekyll, Hugo, Nuxt, Next, Gatsby, or another static site generator. The idea is to serve pre-rendered (static) files over a CDN, thus eliminating any need for a web server. This is a departure from traditional ways of building web apps which typically involved a server-side CMS or a server rendering the content at runtime.
 
-### Table of Contents
-
 ## JAMstack traits
 
 - **Better Performance** Since all the assets can be pre-generated, they can be served over CDN. This provides better performance and easier scalability. 

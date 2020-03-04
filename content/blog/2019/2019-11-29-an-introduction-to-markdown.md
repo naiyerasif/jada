@@ -13,8 +13,6 @@ According to [John Gruber](https://daringfireball.net/projects/markdown/),
 
 Apart from that, markdown lets you to keep your hands on the keyboard and keep typing without breaking the flow; no need to write something and then reach out to click on a button to format the content. 
 
-### Table of Contents
-
 ## A tour of Markdown syntax
 
 ### Headings

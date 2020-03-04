@@ -4,11 +4,6 @@ const appConfig = require('./app.config')
 
 const entities = new AllHtmlEntities()
 const whitespace = ' '
-const emptyspace = ''
-const defaultRenderer = new marked.Renderer()
-
-const stripTocRenderer = new marked.Renderer()
-stripTocRenderer.heading = (text, level, raw, slugger) => (text === appConfig.prefs.tocPattern) ? emptyspace : defaultRenderer.heading(text, level, raw, slugger)
 
 const plainTextRenderer = new marked.Renderer()
 plainTextRenderer.code = (code, infostring, escaped) => code + whitespace
@@ -56,6 +51,5 @@ const summarize = (content) => {
 }
 
 module.exports = {
-  summarize,
-  stripTocRenderer
+  summarize
 }

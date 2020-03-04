@@ -385,6 +385,52 @@
   }
 }
 
+// Table of Contents
+
+.toc {
+  font-size: variables.$font-size-sm;
+  margin-bottom: variables.$gap-lg;
+  
+  summary {
+    outline: none;
+    font-weight: variables.$weight-bold;
+    margin-bottom: variables.$gap-xs;
+  }
+
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+
+    li {
+      $toc-margin: 1rem;
+
+      .header-1 {
+        margin-left: $toc-margin;
+      }
+  
+      .header-2 {
+        margin-left: $toc-margin * 2;
+      }
+  
+      .header-3 {
+        margin-left: $toc-margin * 3;
+      }
+  
+      .header-4 {
+        margin-left: $toc-margin * 4;
+      }
+  
+      .header-5 {
+        margin-left: $toc-margin * 5;
+      }
+  
+      .header-6 {
+        margin-left: $toc-margin * 6;
+      }
+    }
+  }
+}
+
 // Icons
 
 .icon {

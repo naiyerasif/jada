@@ -3,7 +3,6 @@ const purgecss = require('@fullhuman/postcss-purgecss')
 const marked = require('marked')
 const purgecssConfig = require('./purgecss.config')
 const appConfig = require('./app.config')
-const stripTocRenderer = require('./marked.config').stripTocRenderer
 
 const postcssPlugins = []
 
@@ -94,7 +93,7 @@ module.exports = {
               link: appConfig.url
             }
           ],
-          content: marked(node.content, { renderer: stripTocRenderer })
+          content: marked(node.content)
         })
       }
     },
@@ -108,8 +107,7 @@ module.exports = {
   transformers: {
     remark: {
       plugins: [
-        ['gridsome-plugin-remark-shiki', { theme: 'nord', skipInline: true }],
-        ['remark-toc', { heading: appConfig.prefs.tocPattern, maxDepth: 3, tight: true }]
+        ['gridsome-plugin-remark-shiki', { theme: 'nord', skipInline: true }]
       ],
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],

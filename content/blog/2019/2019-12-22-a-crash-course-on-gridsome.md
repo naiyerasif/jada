@@ -7,8 +7,6 @@ tags: ['course', 'gridsome']
 
 [Gridsome](https://gridsome.org/) is a Vue.js based framework to build websites and apps (like *this* one!) using markdown. It simplifies the process by offering an easy workflow to connect to data sources &mdash; JSON or markdown files, relational databases, headless CMSes or serverless backend &mdash; you name it. With the speed and approachability offered by Vue.js, you can use Gridsome to extend and customize it to build blogs, documentation, portfolio and more.
 
-### Table of Contents
-
 ## Why Gridsome?
 
 - Simple and approachable

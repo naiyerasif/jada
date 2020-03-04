@@ -16,7 +16,7 @@
         <ul>
           <li>Accessible and fluid design</li>
           <li>Markdown support for blog content</li>
-          <li>Table of contents for articles (with <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/remarkjs/remark-toc">remark-toc</a>)</li>
+          <li>Table of contents for articles</li>
           <li>Tags for articles</li>
           <li>Pagination for blog posts</li>
           <li>Contributor profiles (with <a target="_blank" rel="nofollow noopener noreferrer" href="https://gridsome.org/plugins/@gridsome/vue-remark">@gridsome/vue-remark</a>)</li>

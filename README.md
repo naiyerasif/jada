@@ -12,7 +12,7 @@ A blog starter for [Gridsome](https://gridsome.org/)
 
 - Accessible and fluid design
 - Markdown support for blog content
-- Table of contents for articles (with [remark-toc](https://github.com/remarkjs/remark-toc))
+- Table of contents for articles
 - Tags for articles
 - Pagination for blog posts
 - Contributor profiles (with [@gridsome/vue-remark](https://gridsome.org/plugins/@gridsome/vue-remark))
@@ -69,9 +69,7 @@ You can directly [generate](https://github.com/Microflash/jada/generate) a new p
   - `prefs.blogDir` pointing toward the location of the blog content
   - `searchConfig` containing `file` (used to customize the location of search index generated during the build) and `options` (used to define the behavior of [`fuse`](https://fusejs.io/))
   - `editConfig` that has configuration for edit URL generation
-- **[marked.config.js](./marked.config.js)** contains 
-  - `summarize` function that generates the blurbs for the blog posts
-  - `stripTocRenderer` that strips the `tocPattern` from the markdown files while converting them to HTML. This HTML is then used to generate RSS feed.
+- **[marked.config.js](./marked.config.js)** contains `summarize` function that generates the blurbs for the blog posts
 - **[purgecss.config.js](./purgecss.config.js)** contains the [configuration](https://www.purgecss.com/configuration) for [purgecss](https://www.purgecss.com/) to strip down the unused CSS classes during the build
 - **[gridsome.config.js](./gridsome.config.js)** contains the [project configuration](https://gridsome.org/docs/config/) for Gridsome
 - **[gridsome.server.js](./gridsome.server.js)** contains the [server configuration](https://gridsome.org/docs/server-api/) for Gridsome

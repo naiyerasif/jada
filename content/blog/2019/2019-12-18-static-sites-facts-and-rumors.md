@@ -9,8 +9,6 @@ A typical CMS-driven website works by building each page on-demand, fetching con
 
 A static site generator takes a different approach and generates all the pages of the website once when there's actually changes to the site. This means there's no moving parts in the deployed website. Caching gets much easier, performance goes up and static sites are far more secure.
 
-### Table of Contents
-
 ## Facts
 
 The benefits of static sites are manifold.
