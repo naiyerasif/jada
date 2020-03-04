@@ -35,20 +35,14 @@ $weight-bold: 700 !default;
 
 $weight-headings: $weight-semibold !default;
 
-$text-sm: 0.75rem !default;
-$text-rg: 1rem !default;
-$text-md: 1.25rem !default;
-$text-lg: 1.5rem !default;
-$text-xl: 1.75rem !default;
+$font-size-xs: calc(0.75rem + 0.125vw) !default;
+$font-size-sm: calc(0.8rem + 0.25vw) !default;
+$font-size: calc(1rem + 0.2vw) !default;
+$font-size-md: calc(1.0625rem + 0.5vw) !default;
+$font-size-lg: calc(1.125rem + 1vw) !default;
+$font-size-xl: calc(1.5rem + 1.5vw) !default;
 
-$font-size: $text-rg !default;
 $text-size-adjust: 100% !default;
-
-$font-size-post: calc(1rem + 1vw) !default;
-$font-size-post-meta: calc(0.8rem + 0.2vw) !default;
-$font-size-title: calc(1.5rem + 1vw) !default;
-$font-size-subtitle: calc(0.75rem + 1vw) !default;
-$font-size-intro: calc(1.0625rem + 0.5vw) !default;
 
 // Spacing
 
@@ -68,11 +62,12 @@ $gap-xl: 2rem !default;
 $gap-2xl: 3rem !default;
 $gap-3xl: 5rem !default;
 
-$margin: $gap-lg !default;
 $gap: $gap-rg !default;
-$hgap-sm: calc(2vw + 1rem) !default;
-$hgap: calc(4vw + 1rem) !default;
-$vgap: calc(2vw + 1rem) !default;
+$margin: $gap-lg !default;
+
+$expanse-md: calc(2vw + 1rem) !default;
+$expanse-lg: calc(4vw + 1rem) !default;
+
 $canvas: 50vw !default;
 
 $cell-sm: 12rem !default;
@@ -138,4 +133,4 @@ $text-blockquote: $color-muted !default;
 
 $table-thead: $color-pronounced !default;
 $scrollbar: var(--scrollbar) !default;
-$selected: colors.fade(colors.vibrant(colors.secondary(500), 15%), 0.85) !default;
+$selected: colors.fade(colors.vibrant(colors.secondary(500), 15%), 0.75) !default;

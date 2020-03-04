@@ -18,8 +18,8 @@
   margin: 0 auto;
   position: relative;
   width: auto;
-  @include layouts.vspace(variables.$vgap);
-  @include layouts.hspace(variables.$hgap);
+  @include layouts.vspace(variables.$expanse-md);
+  @include layouts.hspace(variables.$expanse-lg);
 }
 
 .canvas-fluid {
@@ -34,6 +34,7 @@
 
 .header {
   @include layouts.flex($wrap: wrap, $justify: space-between);
+  font-size: variables.$font-size-sm;
 }
 
 .brand {
@@ -193,7 +194,7 @@
   }
 
   .search-result-summary {
-    font-size: variables.$text-sm;
+    font-size: variables.$font-size-xs;
     color: variables.$text-muted;
   }
 
@@ -215,7 +216,7 @@
 .hero {
   @include layouts.flex($justify: space-around);
   flex-direction: column;
-  @include layouts.vspace(variables.$hgap);
+  @include layouts.vspace(variables.$expanse-lg);
   background-color: variables.$background-auxiliary;
 
   @include queries.within-tab-landscape {
@@ -224,12 +225,12 @@
 }
 
 .title {
-  font-size: variables.$font-size-title;
+  font-size: variables.$font-size-xl;
   color: variables.$text;
 }
 
 .subtitle {
-  font-size: variables.$font-size-subtitle;
+  font-size: variables.$font-size-md;
   color: variables.$text-muted;
 }
 
@@ -280,10 +281,9 @@
 
 .main {
   @extend .canvas;
-  font-size: 1.0625rem;
 
   & > p:first-of-type {
-    font-size: variables.$font-size-intro;
+    font-size: variables.$font-size-md;
   }
 }
 
@@ -299,7 +299,7 @@
 }
 
 .post {
-  margin-bottom: variables.$hgap-sm;
+  margin-bottom: variables.$expanse-md;
 
   a {
     text-decoration: none;
@@ -314,7 +314,7 @@
 
   .post-header,
   .post-footer {
-    font-size: variables.$font-size-post-meta;
+    font-size: variables.$font-size-sm;
   }
 
   .post-header {
@@ -322,7 +322,7 @@
   }
 
   .post-body {
-    font-size: variables.$font-size-post;
+    font-size: variables.$font-size-lg;
   }
 
   .post-footer {
@@ -334,7 +334,7 @@
 
 .pagination {
   @include layouts.flex;
-  @include layouts.hspace(variables.$hgap);
+  @include layouts.hspace(variables.$expanse-lg);
   margin-bottom: variables.$gap-lg;
   z-index: 15;
 
@@ -361,6 +361,7 @@
 
 .footer {
   @include layouts.flex;
+  font-size: variables.$font-size-sm;
 
   @include queries.within-tab-landscape {
     justify-content: flex-start;
@@ -371,7 +372,7 @@
   }
 
   .grid-sm {
-    @include layouts.vspace(variables.$vgap);
+    @include layouts.vspace(variables.$expanse-md);
   }
 
   .is-lead {
