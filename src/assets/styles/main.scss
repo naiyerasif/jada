@@ -30,6 +30,11 @@
   @include layouts.canvas(false);
 }
 
+.content {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
 // Header
 
 .header {
@@ -237,6 +242,7 @@
 .metadata {
   @include layouts.flex($justify: flex-start);
   flex-direction: row;
+  font-size: variables.$font-size-sm;
 }
 
 .metadata-author {
@@ -261,6 +267,10 @@
     height: variables.$gfx-avatar;
     width: variables.$gfx-avatar;
     border-radius: 50%;
+
+    @include queries.phone {
+      margin-bottom: variables.$gap;
+    }
   }
 }
 
