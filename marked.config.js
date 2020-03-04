@@ -28,17 +28,16 @@ plainTextRenderer.text = (text) => text
 
 const preprocess = (md) => {
   const limit = appConfig.prefs.blurbSize
+  const space = ['space', 'hr', 'br']
   const tokens = marked.lexer(md)
   let markdown = ''
-  let shouldStop = false
   for (token of tokens) {
-    if (shouldStop || markdown.length > limit || token.text === appConfig.prefs.tocPattern) break
-    if (markdown !== '' && token.type === 'heading') shouldStop = true
+    if ((markdown !== '' && token.type === 'heading') || markdown.length > limit) break
     if (token.type !== 'heading' && token.text) {
-      markdown = markdown + token.text.trim()
+      markdown += token.text.trim()
     }
-    if (token.type === 'space' || token.type === 'hr' || token.type === 'br') {
-      markdown = markdown + whitespace
+    if (space.includes(token.type)) {
+      markdown += whitespace
     }
   }
   return markdown

@@ -31,7 +31,7 @@
         <a target="_blank" rel="noopener noreferrer" :href="$page.post.editUrl">
           <IconEdit class="icon" /> Edit this page
         </a>
-        <a :href="jumpToTableOfContents">
+        <a href="#table-of-contents">
           <IconList class="icon" /> Table of Contents
         </a>
         <a href="#app">
@@ -95,9 +95,6 @@ export default {
     displayDate() {
       const published = `Published <time>${this.$page.post.date}</time>`
       return !this.$page.post.hasOwnProperty('updated') ? published : (this.$page.post.updated !== this.$page.post.date ? `Updated <time>${this.$page.post.updated}</time>` : published); 
-    },
-    jumpToTableOfContents() {
-      return `#${appConfig.prefs.tocPattern.toLowerCase().replace(/ /g, '-')}`
     },
     outdationMessage() {
       let warning = null

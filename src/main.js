@@ -11,8 +11,10 @@ export default function (Vue, { router, head, isClient }) {
   const entities = new AllHtmlEntities()
   Vue.filter('clip', (value, size) => {
     const clipSize = size || 240
-    const regex = new RegExp(`^(.{${clipSize}}[^\s]*).*`)
-    return entities.decode(value.replace(regex, '$1'))
+    const terminator = '. '
+    const lastTerminator = value.indexOf(terminator, clipSize)
+    const finalValue = lastTerminator > 0 ? value.substring(0, lastTerminator) : value.substring(0, value.indexOf(terminator.trim(), clipSize))
+    return entities.decode(finalValue)
   })
 
   Vue.use(VueFuse)

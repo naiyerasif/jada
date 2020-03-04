@@ -6,8 +6,6 @@ module.exports = {
   maintainer: 'Jada Zorebian',
   copyright: `Copyright ${new Date().getFullYear()} ${this.name}`,
   prefs: {
-    tocPattern: 'Table of Contents',
-    blogDir: 'content/blog/',
     blurbSize: 251,
     outdationPeriod: 365 // in days
   },
