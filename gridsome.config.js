@@ -52,7 +52,7 @@ module.exports = {
       use: '@gridsome/vue-remark',
       options: {
         typeName: 'Profile',
-        baseDir: './profiles',
+        baseDir: './content/profiles',
         template: './src/templates/Profile.vue',
         route: '/profile/:id'
       }
