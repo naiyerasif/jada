@@ -30,7 +30,7 @@ query Tag ($id: ID!, $page: Int) {
     	      date (format: "MMM D, Y")
     	      updated (format: "MMM D, Y")
             path
-            blurb
+            excerpt
             tags {
               title,
               path

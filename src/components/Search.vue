@@ -17,7 +17,7 @@
           </section>
           <a v-for="(post, index) in results" :key="index" :href="post.item.path" @click="reset" :class="{ 'search-result-highlighted' : index === highlightedIndex }" class="search-result">
             <span class="search-result-title">{{ post.item.title }}</span>
-            <span class="search-result-summary">{{ post.item.blurb | clip }} &hellip;</span>
+            <span class="search-result-excerpt">{{ post.item.excerpt | clip }} &hellip;</span>
           </a>
         </div>
       </div>

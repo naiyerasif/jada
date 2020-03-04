@@ -6,7 +6,7 @@ module.exports = {
   maintainer: 'Jada Zorebian',
   copyright: `Copyright ${new Date().getFullYear()} ${this.name}`,
   prefs: {
-    blurbSize: 251,
+    excerptSize: 251,
     outdationPeriod: 365 // in days
   },
   editConfig: {
@@ -40,7 +40,7 @@ module.exports = {
       minMatchCharLength: 2,
       keys: [
         'title',
-        'blurb'
+        'excerpt'
       ]
     }
   }

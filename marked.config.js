@@ -27,7 +27,7 @@ plainTextRenderer.image = (href, title, text) => whitespace
 plainTextRenderer.text = (text) => text
 
 const preprocess = (md) => {
-  const limit = appConfig.prefs.blurbSize
+  const limit = appConfig.prefs.excerptSize
   const space = ['space', 'hr', 'br']
   const tokens = marked.lexer(md)
   let markdown = ''

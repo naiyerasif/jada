@@ -85,7 +85,7 @@ module.exports = {
         nodeToFeedItem: (node) => ({
           title: node.title,
           date: node.date,
-          description: node.blurb,
+          description: node.excerpt,
           author: [
             {
               name: `${appConfig.name}`,

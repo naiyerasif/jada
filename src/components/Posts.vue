@@ -12,7 +12,7 @@
         </div>
         <g-link :to="post.node.path">
           <h2 class="post-body">{{ post.node.title }}</h2>
-          <p class="post-footer">{{ post.node.blurb | clip }} &hellip;</p>
+          <p class="post-footer">{{ post.node.excerpt | clip }} &hellip;</p>
         </g-link>
       </div>
     </section>

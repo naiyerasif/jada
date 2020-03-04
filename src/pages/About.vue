@@ -21,7 +21,7 @@
           <li>Pagination for blog posts</li>
           <li>Contributor profiles (with <a target="_blank" rel="nofollow noopener noreferrer" href="https://gridsome.org/plugins/@gridsome/vue-remark">@gridsome/vue-remark</a>)</li>
           <li>Search for blog posts (with <a target="_blank" rel="nofollow noopener noreferrer" href="https://fusejs.io/">Fuse.js</a> and <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/shayneo/vue-fuse">vue-fuse</a>)</li>
-          <li>Blurbs and Edit URL generation for blog posts</li>
+          <li>Excerpts and Edit URL generation for blog posts</li>
           <li>Support for marking articles as outdated</li>
           <li>Syntax highlighting (with <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/octref/shiki">Shiki</a>)</li>
           <li>Dark and light themes with <a target="_blank" rel="nofollow noopener noreferrer" href="https://sass-lang.com/">Sass</a> and theme-switching support</li>

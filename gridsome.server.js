@@ -26,10 +26,10 @@ module.exports = function (api) {
   api.loadSource(({ addSchemaResolvers }) => {
     addSchemaResolvers({
       Post: {
-        blurb: {
+        excerpt: {
           type: GraphQLString,
           resolve(post) {
-            return post.blurb ? post.blurb : summarize(post.content)
+            return post.excerpt ? post.excerpt : summarize(post.content)
           }
         },
         editUrl: {
@@ -49,7 +49,7 @@ module.exports = function (api) {
       return {
         title: post.title,
         path: post.path,
-        blurb: post.blurb ? post.blurb : summarize(post.content)
+        excerpt: post.excerpt ? post.excerpt : summarize(post.content)
       }
     })
 

@@ -28,7 +28,7 @@ query Posts ($page: Int) {
         id
         title
         date (format: "MMM D, Y")
-        blurb
+        excerpt
         timeToRead
         path
         tags {
