@@ -108,7 +108,8 @@
 .search-box, .results-container {
   display: flex;
   background-color: variables.$background-muted;
-  padding: variables.$gap-xs variables.$gap-rg;
+  @include layouts.hspace(variables.$gap-rg);
+  
   border: 1px solid variables.$border;
   border-radius: variables.$radius;
 
@@ -147,6 +148,7 @@
 }
 
 .search-box {
+  @include layouts.vspace(variables.$gap-xs);
   margin-top: 2px;
 
   &:focus,
@@ -176,12 +178,7 @@
     cursor: pointer;
     text-decoration: none;
     border-top: 1px solid variables.$selected;
-    padding-top: variables.$gap-xs;
-    padding-bottom: variables.$gap-xs;
-
-    &:last-child {
-      padding-bottom: 0;
-    }
+    @include layouts.vspace(variables.$gap-rg);
   }
 
   .search-result-title,
