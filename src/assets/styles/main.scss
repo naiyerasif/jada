@@ -243,6 +243,10 @@
   @include layouts.flex($justify: flex-start);
   flex-direction: row;
   font-size: variables.$font-size-sm;
+
+  & > * {
+    margin-bottom: variables.$gap-xs;
+  }
 }
 
 .metadata-author {
