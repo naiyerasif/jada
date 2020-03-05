@@ -40,6 +40,7 @@
 .header {
   @include layouts.flex($wrap: wrap, $justify: space-between);
   font-size: variables.$font-size-sm;
+  background-color: variables.$background-pronounced;
 }
 
 .brand {
@@ -218,7 +219,7 @@
 .hero {
   @include layouts.flex($justify: space-around);
   flex-direction: column;
-  @include layouts.vspace(variables.$expanse-lg);
+  @include layouts.vspace(variables.$expanse-xl);
   background-color: variables.$background-auxiliary;
 
   @include queries.within-tab-landscape {
@@ -299,18 +300,22 @@
 }
 
 .article-actions {
-  margin-top: calc(4vw + 2.5rem);
+  margin-top: variables.$expanse-lg;
+  margin-bottom: variables.$expanse-md;
 
   & > a {
     display: inline-block;
     text-decoration: none;
-    margin-top: variables.$gap-rg;
     margin-right: variables.$gap-rg;
   }
 }
 
 .post {
   margin-bottom: variables.$expanse-md;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   a {
     text-decoration: none;
@@ -346,7 +351,9 @@
 .pagination {
   @include layouts.flex;
   @include layouts.hspace(variables.$expanse-lg);
-  margin-bottom: variables.$gap-lg;
+  font-size: variables.$font-size-sm;
+  margin-top: variables.$expanse-md;
+  margin-bottom: variables.$expanse-lg;
   z-index: 15;
 
   .is-prev,
@@ -373,9 +380,11 @@
 .footer {
   @include layouts.flex;
   font-size: variables.$font-size-sm;
+  background-color: variables.$background-muted;
 
   @include queries.within-tab-landscape {
     justify-content: flex-start;
+    flex-direction: row-reverse;
   }
 
   nav > * {
@@ -383,6 +392,7 @@
   }
 
   .grid-sm {
+    width: 100%;
     @include layouts.vspace(variables.$expanse-md);
   }
 
@@ -393,6 +403,20 @@
 
   .is-separated {
     margin-right: variables.$gap-sm;
+  }
+
+  .copyright {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: variables.$font-size-xs;
+    margin-bottom: variables.$expanse-md;
+
+    @include queries.phone {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
   }
 }
 

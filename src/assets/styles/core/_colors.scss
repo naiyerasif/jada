@@ -139,12 +139,13 @@ $white: mono(A500);
   --color-muted: #{tertiary(600)};
   --color-pronounced: #{vibrant(secondary(500), 50%)};
   --color-default: #{$black};
-  --color-link: #{shade(primary(500), 5%)};
+  --color-link: #{shade(primary(500), 10%)};
   --color-hovered-link: #{primary(700)};
   --background-default: #{$white};
   --background-auxiliary: #{secondary(A600)};
-  --background-muted: #{tint(secondary(A700), 50%)};
-  --scrollbar: #{secondary(A900)};
+  --background-muted: #{secondary(A500)};
+  --background-pronounced: #{vibrant(shade(secondary(A600), 5%), 35%)};
+  --background-scrollbar: #{shade(secondary(A800), 5%)};
 }
 
 // CSS properties for dark theme
@@ -157,6 +158,7 @@ $white: mono(A500);
   --color-hovered-link: #{primary(300)};
   --background-default: #{shade(tertiary(A300), 30%)};
   --background-auxiliary: #{tertiary(A400)};
-  --background-muted: #{tertiary(A300)};
-  --scrollbar: #{tertiary(A200)};
+  --background-muted: #{shade(tertiary(A300), 10%)};
+  --background-pronounced: #{$black};
+  --background-scrollbar: #{tertiary(A200)};
 }

@@ -4,8 +4,7 @@
 
 * {
   &::-webkit-scrollbar,
-  &::-webkit-scrollbar-track,
-  &::-webkit-scrollbar-button {
+  &::-webkit-scrollbar-track {
     background-color: variables.$background-scrollbar;
   }
 

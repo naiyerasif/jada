@@ -67,6 +67,7 @@ $margin: $gap-lg !default;
 
 $expanse-md: calc(2vw + 1rem) !default;
 $expanse-lg: calc(4vw + 1rem) !default;
+$expanse-xl: calc(4vw + 2rem) !default;
 
 $canvas: 50vw !default;
 
@@ -107,6 +108,7 @@ $color-default: var(--color-default) !default;
 $background-default: var(--background-default) !default;
 $background-auxiliary: var(--background-auxiliary) !default;
 $background-muted: var(--background-muted) !default;
+$background-pronounced: var(--background-pronounced) !default;
 
 $background-body: $background-default !default;
 $background-code: $background-muted !default;
@@ -132,5 +134,5 @@ $text-headings: $color-pronounced !default;
 $text-blockquote: $color-muted !default;
 
 $table-thead: $color-pronounced !default;
-$scrollbar: var(--scrollbar) !default;
+$scrollbar: var(--background-scrollbar) !default;
 $selected: colors.fade(colors.vibrant(colors.secondary(500), 15%), 0.75) !default;
