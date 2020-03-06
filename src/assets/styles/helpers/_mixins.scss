@@ -42,9 +42,9 @@
 @mixin base-font {
   font-family: variables.$family-default;
 
-  @if variables.$variable-fonts {
+  @if variables.$variable-fonts and variables.$family-default-var {
     @supports (font-variation-settings: normal) {
-      font-family: variables.$family-default-var, variables.$family-default;
+      font-family: variables.$family-default-var, variables.$family-native;
     }
   }
 }
@@ -54,9 +54,9 @@
 @mixin code-font {
   font-family: variables.$family-code;
 
-  @if variables.$variable-fonts {
+  @if variables.$variable-fonts and variables.$family-code-var {
     @supports (font-variation-settings: normal) {
-      font-family: variables.$family-code-var, variables.$family-code;
+      font-family: variables.$family-code-var, variables.$family-code-native;
     }
   }
 }
