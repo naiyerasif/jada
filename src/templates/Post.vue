@@ -23,8 +23,8 @@
     </div>
     <div class="container article">
       <div class="content">
+        <blockquote class="is-warning" v-if="outdationMessage">{{ outdationMessage }}</blockquote>
         <Contents :headers="$page.post.headings" />
-        <blockquote class="is-primary" v-if="outdationMessage">{{ outdationMessage }}</blockquote>
         <main class="main" v-html="$page.post.content" />
       </div>
       <div class="article-actions">

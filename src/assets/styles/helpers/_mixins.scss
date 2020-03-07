@@ -37,26 +37,26 @@
   }
 }
 
+// Set font-family
+
+@mixin font-family($default-family, $variable-family) {
+  font-family: $default-family;
+
+  @if variables.$variable-fonts and $variable-family {
+    @supports (font-variation-settings: normal) {
+      font-family: $variable-family;
+    }
+  }
+}
+
 // Set base font-family
 
 @mixin base-font {
-  font-family: variables.$family-default;
-
-  @if variables.$variable-fonts and variables.$family-default-var {
-    @supports (font-variation-settings: normal) {
-      font-family: variables.$family-default-var, variables.$family-native;
-    }
-  }
+  @include font-family(variables.$family-default, variables.$family-default-var);
 }
 
 // Set monospace font-family
 
 @mixin code-font {
-  font-family: variables.$family-code;
-
-  @if variables.$variable-fonts and variables.$family-code-var {
-    @supports (font-variation-settings: normal) {
-      font-family: variables.$family-code-var, variables.$family-code-native;
-    }
-  }
+  @include font-family(variables.$family-code, variables.$family-code-var);
 }
