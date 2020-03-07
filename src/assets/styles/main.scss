@@ -494,8 +494,8 @@ h3,
 h4, 
 h5, 
 h6 {
-  &:focus a .ref-link,
-  &:hover a .ref-link {
+  &:focus a .citation,
+  &:hover a .citation {
     @include mixins.hide(false);
     display: inline-block;
     width: 1.25ch;

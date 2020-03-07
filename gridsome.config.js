@@ -116,7 +116,7 @@ module.exports = {
         content: {
           type: 'element',
           tagName: 'span',
-          properties: { className: ['ref-link'] }
+          properties: { className: ['citation'] }
         }
       }
     }
