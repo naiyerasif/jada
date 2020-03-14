@@ -226,6 +226,13 @@
   }
 }
 
+.sidekick {
+  @include layouts.flex($justify: space-around);
+  flex-direction: column;
+  background-color: variables.$background-subtle;
+  @include layouts.vspace(variables.$expanse-md);
+}
+
 .title {
   font-size: variables.$font-size-xl;
   color: variables.$text;
@@ -299,9 +306,6 @@
 }
 
 .article-actions {
-  margin-top: variables.$expanse-lg;
-  margin-bottom: variables.$expanse-md;
-
   & > a {
     display: inline-block;
     text-decoration: none;
@@ -352,8 +356,6 @@
   @include layouts.flex;
   @include layouts.hspace(variables.$expanse-lg);
   font-size: variables.$font-size-sm;
-  margin-top: variables.$expanse-md;
-  margin-bottom: variables.$expanse-lg;
   z-index: 15;
 
   .is-prev,
@@ -512,7 +514,7 @@ h6 {
 // Active links
 
 .active {
-  text-decoration: underline dotted;
+  font-weight: variables.$weight-bold;
 }
 
 // Separator

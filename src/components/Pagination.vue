@@ -1,9 +1,11 @@
 <template>
-  <section class="pagination">
-    <g-link class="is-prev" :to="previousPage(input.currentPage)" v-if="input.currentPage > 1"><IconChevronLeft class="icon-sm" /> Prev</g-link>
-    <div>page {{ input.currentPage }} of {{ input.totalPages }}</div>
-    <g-link class="is-next" :to="nextPage(input.currentPage)" v-if="input.currentPage < input.totalPages">Next <IconChevronRight class="icon-sm" /></g-link>
-  </section>
+  <div class="container sidekick">
+    <section class="pagination">
+      <g-link class="is-prev" :to="previousPage(input.currentPage)" v-if="input.currentPage > 1"><IconChevronLeft class="icon-sm" /> Prev</g-link>
+      <div>page {{ input.currentPage }} of {{ input.totalPages }}</div>
+      <g-link class="is-next" :to="nextPage(input.currentPage)" v-if="input.currentPage < input.totalPages">Next <IconChevronRight class="icon-sm" /></g-link>
+    </section>
+  </div>
 </template>
 
 <script>

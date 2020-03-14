@@ -144,6 +144,7 @@ $white: mono(A500);
   --background-default: #{$white};
   --background-auxiliary: #{secondary(A600)};
   --background-muted: #{secondary(A500)};
+  --background-subtle: #{tint(secondary(A600), 20%)};
   --background-pronounced: #{vibrant(shade(secondary(A600), 5%), 35%)};
   --background-scrollbar: #{shade(secondary(A800), 5%)};
 }
@@ -159,6 +160,7 @@ $white: mono(A500);
   --background-default: #{shade(tertiary(A300), 30%)};
   --background-auxiliary: #{tertiary(A400)};
   --background-muted: #{shade(tertiary(A300), 10%)};
+  --background-subtle: #{shade(tertiary(A300), 15%)};
   --background-pronounced: #{$black};
   --background-scrollbar: #{tertiary(A200)};
 }

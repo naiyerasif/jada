@@ -30,6 +30,8 @@
           <li>Sitemap (with <a target="_blank" rel="nofollow noopener noreferrer" href="https://github.com/gridsome/gridsome/tree/master/packages/plugin-sitemap">plugin-sitemap</a>)</li>
         </ul>
       </main>
+    </div>
+    <div class="container sidekick">
       <div class="article-actions">
         <a href="#top">
           <IconUp class="icon" /> Back to top
