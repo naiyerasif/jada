@@ -9,7 +9,7 @@
 @use 'helpers/layouts';
 @use 'helpers/mixins';
 @use 'extensions';
-@use 'globals';
+@use '../../../node_modules/@microflash/remarkability/scss/remarkability.global.scss';
 
 // Container
 
@@ -111,7 +111,7 @@
   background-color: variables.$background-muted;
   @include layouts.hspace(variables.$gap-rg);
   
-  border: 1.5px solid variables.$border;
+  border: 1.5px solid variables.$border-active;
   border-radius: variables.$radius;
 
   @include queries.tab-landscape {
