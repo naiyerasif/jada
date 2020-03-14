@@ -132,8 +132,6 @@
 }
 
 .search {
-  margin: -(variables.$gap-xs);
-  padding: variables.$gap-xs;
   outline: none;
   border: none;
   width: 100%;
@@ -152,7 +150,6 @@
 .search-box {
   align-items: center;
   @include layouts.vspace(variables.$gap-xs);
-  margin-top: 2px;
 
   &:focus,
   &:hover {
