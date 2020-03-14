@@ -8,6 +8,7 @@ module.exports = {
   prefs: {
     editContext: 'https://github.com/Microflash/jada/edit/master',
     excerptSize: 251,
+    maxTocDepth: 3,
     outdationPeriod: 365 // in days
   },
   searchConfig: {

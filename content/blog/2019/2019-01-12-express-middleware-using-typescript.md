@@ -9,7 +9,7 @@ tags: ['guide', 'express', 'typescript']
 
 TypeScript [has been gaining](https://2018.stateofjs.com/javascript-flavors/typescript/) popularity and adoption for a while as a strongly-typed flavor of JavaScript. In this guide, we'll explore a possible way to use TypeScript to write an Express middleware.  We'll start with a JavaScript project, add TypeScript support to it and explore some configurations to customize the behavior of TypeScript Compiler (`tsc`).
 
-### Setup
+##### Setup
 
 > We'll use
 > - Node 12
