@@ -6,22 +6,9 @@ module.exports = {
   maintainer: 'Jada Zorebian',
   copyright: `Copyright ${new Date().getFullYear()} ${this.name}`,
   prefs: {
+    editContext: 'https://github.com/Microflash/jada/edit/master',
     excerptSize: 251,
     outdationPeriod: 365 // in days
-  },
-  editConfig: {
-    paths: [
-      {
-        collection: 'Post',
-        basePath: `https://github.com/Microflash/jada/edit/master/content/`,
-        constructEditUrl: (ctx, path) => {
-          const tokens = path.split('/')
-          tokens[1] = tokens[1] + "/" + tokens[2]
-          const slug = tokens.splice(1, 2).join('/') + tokens.join('-')
-          return `${ctx + slug.substring(0, slug.length - 1)}.md`
-        }
-      }
-    ]
   },
   searchConfig: {
     file: {

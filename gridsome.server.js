@@ -5,37 +5,35 @@ const moment = require('moment')
 const appConfig = require('./app.config')
 const summarize = require('./marked.config').summarize
 
-const editConfigs = appConfig.editConfig.paths
-const { basePath, constructEditUrl } = editConfigs.filter(p => p.collection === 'Post')[0]
-
 const outdationDate = appConfig.prefs.outdationPeriod ? moment().clone().subtract(appConfig.prefs.outdationPeriod, 'days').startOf('day') : null
+
+const excludedOutdationTags = ['never']
 
 module.exports = function (api) {
 
   api.onCreateNode(options => {
-    if (options.internal.typeName === 'Post' && !options.updated) {
-      options.updated = options.date
+    if (options.internal.typeName === 'Post') {
+      if (!options.updated) {
+        options.updated = options.date
+      }
+
+      if (!options.outdated && !excludedOutdationTags.includes(options.outdated)) {
+        options.outdated = outdationDate && moment(options.updated, 'YYYY-MM-DD HH:mm:ss').isBefore(outdationDate) ? 'old' : '#'
+      }
     }
 
-    if (options.internal.typeName === 'Post' && !options.outdated && !['never'].includes(options.outdated)) {
-      options.outdated = outdationDate && moment(options.updated, 'YYYY-MM-DD HH:mm:ss').isBefore(outdationDate) ? 'old' : '#'
-    }
     return { ...options }
   })
 
-  api.loadSource(({ addSchemaResolvers }) => {
+  api.loadSource(({ addMetadata, addSchemaResolvers }) => {
+    addMetadata('editContext', appConfig.prefs.editContext)
+
     addSchemaResolvers({
       Post: {
         excerpt: {
           type: GraphQLString,
           resolve(post) {
             return post.excerpt ? post.excerpt : summarize(post.content)
-          }
-        },
-        editUrl: {
-          type: GraphQLString,
-          resolve(post) {
-            return constructEditUrl(basePath, post.path)
           }
         }
       }
