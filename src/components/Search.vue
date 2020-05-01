@@ -1,8 +1,7 @@
 <template>
   <div class="search-container">
-    <SearchFocal @keyup="focusSearch" />
     <div class="search-box" :class="{ 'remove-bottom-border' : searchResultsVisible && query.length > 0 }">
-      <input type="text" placeholder="Search (Press  &quot;/&quot; to focus)" class="search" v-model="query" @input="softReset" @keyup="performSearch" @keyup.esc="searchResultsVisible = false" @keydown.up.prevent="highlightPrev" @keydown.down.prevent="highlightNext" @keyup.enter="performSearch" @blur="searchResultsVisible = false" @focus="searchResultsVisible = true" ref="search" aria-label="Search">
+      <input type="text" class="search" v-model="query" @input="softReset" @keyup="performSearch" @keyup.esc="searchResultsVisible = false" @keydown.up.prevent="highlightPrev" @keydown.down.prevent="highlightNext" @keyup.enter="performSearch" @blur="searchResultsVisible = false" @focus="searchResultsVisible = true" ref="search" aria-label="Search">
 
       <transition name="slide-up" mode="out-in">
         <IconSearch class="icon icon-search" v-if="query.length < 1" />
@@ -27,7 +26,6 @@
 
 <script>
 import axios from 'axios'
-import SearchFocal from './SearchFocal'
 import IconSearch from '~/assets/images/icon-search.svg'
 import IconClear from '~/assets/images/icon-clear.svg'
 import * as appConfig from '../../app.config'
@@ -36,7 +34,6 @@ const searchConfig = appConfig.searchConfig
 
 export default {
   components: {
-    SearchFocal,
     IconSearch,
     IconClear
   },
@@ -85,11 +82,6 @@ export default {
     },
     scrollIntoView() {
       this.$refs.results.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' })
-    },
-    focusSearch(e) {
-      if (e.key === '/') {
-        this.$refs.search.focus()
-      }
     }
   }
 }
