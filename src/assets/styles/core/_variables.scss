@@ -78,8 +78,6 @@ $background-muted: var(--background-muted) !default;
 $background-subtle: var(--background-subtle) !default;
 $background-pronounced: var(--background-pronounced) !default;
 
-$background-scrollbar: $background-auxiliary !default;
-
 $link: var(--color-link) !default;
 $link-hover: var(--color-hovered-link) !default;
 
@@ -92,18 +90,21 @@ $scrollbar: var(--background-scrollbar) !default;
 $selected: colors.fade(colors.vibrant(colors.secondary(500), 15%), 0.75) !default;
 
 @use '../../../../node_modules/@microflash/remarkability/scss/variables' with (
-  $closer-lists: true,
+  $compact-lists: true,
+  $multiline-wrap: true,
+  $custom-selection: true,
+  $custom-scrollbar: true,
   $custom-colors: true,
   $custom-fonts: true,
-  $font-smoothing: true,
-  $text-adjusting: true,
-  $round-images: true,
-  $round-codeblocks: true,
+  $smooth-fonts: true,
+  $adjust-text: true,
+  $round-media: true,
+  $round-blocks: true,
+  $responsive-tables: true,
   $hovered-links: true,
+  $scroll-smoothly: true,
   $weight-headings: $weight-semibold,
-  $font-size: calc(1rem + 0.2vw),
-  $margin: $gap-lg,
-  $radius: $radius,
+  $font-size-base: calc(1rem + 0.2vw),
   $background-body: $background-default,
   $background-code: $background-muted,
   $background-ins: $background-muted,
@@ -111,15 +112,20 @@ $selected: colors.fade(colors.vibrant(colors.secondary(500), 15%), 0.75) !defaul
   $background-table: inherit,
   $background-table-even: inherit,
   $background-table-hover: $background-muted,
-  $border: $color-muted,
+  $background-selected: $selected,
+  $background-scrollbar: $background-auxiliary,
+  $border-color: $color-muted,
+  $radius: $radius,
   $text: $text,
   $text-code: inherit,
-  $text-strong: inherit,
+  $text-bold: inherit,
   $text-muted: $text-muted,
   $text-headings: $color-pronounced,
   $text-blockquote: $color-muted,
   $link: $link,
   $link-hover: $link-hover,
   $link-visited: $color-pronounced,
-  $table-thead: $color-pronounced
+  $table-thead: $color-pronounced,
+  $scrollbar: $scrollbar,
+  $margin: $gap-lg
 );
